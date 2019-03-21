@@ -46,8 +46,10 @@ function Bio() {
                             </p>
                         </div>
                         <div
+                            className="icon-container"
                             style={{
                                 display: "flex",
+                                alignItems: "center",
                                 marginLeft: rhythm(2.25),
                                 marginTop: rhythm(1 / 2),
                             }}

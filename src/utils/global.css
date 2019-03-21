@@ -1,0 +1,5 @@
+@media (max-width: 375px) {
+    .icon-container {
+        margin-left: 0 !important;
+    }
+}
