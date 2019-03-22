@@ -6,6 +6,17 @@ categories:
     - post
     - ever
 description: My first post ever!
+keywords:
+    - blog
+    - tech
+    - writing
+    - sports
+    - music
+    - fantasy-sports
+    - life
+    - anime
+    - video-games
+    - basketball
 ---
 
 Welcome!

@@ -10,6 +10,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import SocialIcons from "../constants/social"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import { rhythm } from "../utils/typography"
 
@@ -63,8 +64,8 @@ function Bio() {
                                             marginRight: rhythm(1.5),
                                         }}
                                     >
-                                        <a
-                                            style={{ boxShadow: "none" }}
+                                        <OutboundLink
+                                            style = {{ boxShadow: "none" }}
                                             href={s.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -75,7 +76,7 @@ function Bio() {
                                                 title={`Link to my ${s.kind}`}
                                                 style={{ fontSize: "30px" }}
                                             />
-                                        </a>
+                                        </OutboundLink>
                                     </li>
                                 ))}
                             </ul>

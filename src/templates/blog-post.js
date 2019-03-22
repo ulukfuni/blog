@@ -18,6 +18,7 @@ class BlogPostTemplate extends React.Component {
                 <SEO
                     title={post.frontmatter.title}
                     description={post.frontmatter.description || post.excerpt}
+                    keywords={post.frontmatter.keywords}
                 />
                 <div style={{ marginBottom: rhythm(1) }}>
                     <h1>{post.frontmatter.title}</h1>

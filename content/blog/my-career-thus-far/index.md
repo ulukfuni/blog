@@ -5,6 +5,13 @@ categories:
     - career
     - tech
     - dev
+keywords:
+    - career
+    - developer
+    - tech
+    - front-end
+    - electrical-engineering
+    - starups
 description: An introspective look back into my career thus far.
 ---
 
