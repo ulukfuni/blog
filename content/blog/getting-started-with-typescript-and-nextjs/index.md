@@ -1,6 +1,6 @@
 ---
 title: Getting Started with TypeScript and NextJs
-date: '2019-04-22'
+date: '2019-04-23'
 categories:
     - Dev
     - JavaScript
@@ -14,7 +14,7 @@ keywords:
 description: My experience with trying to integrate TypeScript into a react application.
 ---
 
-> TL;DR I am an amateur when it comes to type systems as I came from JavaScript and PHP background, so this new must-type-everything-before-running is tedious and new to me. Learned a few things and made a starter guide to Typescript as it pertains to writing React code. Check out all code [here]().
+> TL;DR I am an amateur when it comes to type systems as I came from JavaScript and PHP background, so this new must-type-everything-before-running is tedious and new to me. Learned a few things and made a small guide to Typescript as it pertains to writing React code.
 
 So I was always curious about TypeScript and I wanted to make something with it to see all the gains I can make to my coding if I were to add it in to a project. Typescript is a typed superset of Javascript and it compiles to plain Javascript. So prior knowledge of Javascript is required, first and foremost.
 
