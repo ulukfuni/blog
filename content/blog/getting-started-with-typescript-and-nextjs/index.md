@@ -14,7 +14,7 @@ keywords:
 description: My experience with trying to integrate TypeScript into a react application.
 ---
 
-> TL;DR I am an amateur when it comes to type systems as I came from JavaScript and PHP background, so this new must-type-everything-before-running is tedious and new to me. Learned a few things and made a small guide to Typescript as it pertains to writing React code.
+> TL;DR I am an amateur when it comes to type systems as I came from a JavaScript and PHP background, so this new must-type-everything-before-running is tedious and new to me. Learned a few things and made a small guide to Typescript as it pertains to writing React code.
 
 So I was always curious about TypeScript and I wanted to make something with it to see all the gains I can make to my coding if I were to add it in to a project. Typescript is a typed superset of Javascript and it compiles to plain Javascript. So prior knowledge of Javascript is required, first and foremost.
 
@@ -46,11 +46,11 @@ let obj:object = { stuff: 'stuff' }
 const doThis = (things:string):string => calculateStuff() + things
 ```
 
-TypeScript won't yell at you for missing a type declaration though (unless you made your IDE yell at you). No type declaration means no type checking and all the good stuff Typescript will help you so it would benefit you to type everything.
+TypeScript won't yell at you for missing a type declaration though (unless you made your IDE yell at you). No type declaration means no type checking and all the good stuff Typescript comes with so it would benefit you to type everything.
 
-Some of type declarations are pretty straightforward for your variable declarations. Basically, after declaring the variable you just follow the variable name with a colon and the type that the variable is going to be.
+Some of the type declarations are pretty straightforward for your variable declarations. Basically, after declaring the variable you just follow the variable name with a colon and the type that the variable is going to be.
 
-The `any` type is your get-out-of-jail-free card but you should only use it if you have no idea what the type is going to be. This is probably the type you will be using the most if adding TypeScript to an existing project.
+The `any` type is your get-out-of-jail-free card but you should only use it if you have no idea what the type is going to be. This is probably the type you will be using the most if adding TypeScript to an existing project (for API requests and the like).
 
 The `notSameThings` variable is typed as a Tuple. A tuple type is a way to type an array that has a fixed number of elements that are all not the same type.
 
@@ -82,7 +82,7 @@ interface Things {
 
 This is as deep as I got into TypeScript in order to start integrating or building stuff. You can look at the official docs [here](https://www.typescriptlang.org/).
 
-Lets jump into seeing if our new-found prowess in typing can help us with React.
+Let's jump into seeing if our new-found prowess in typing can help us with React.
 
 I started with the [boilerplate](https://www.vietnguyen.site/getting-started-with-nextjs-styled-components-and-rebass/) I made. Next, you should install TypeScript and the types that the other libraries would require. Luckily, since we are arriving to the TypeScript movement late, there have been type libraries already written for each library we are using. If you are using the boilerplate, you need to do this:
 
@@ -142,7 +142,7 @@ Last new file at the root of the project and call it .babelrc
 
 and now you are ready to integrate TypeScript into your react code.
 
-Here is an example of what a component thats using styled components could look like.
+Here is an example of what a component that's using styled components could look like.
 
 ```jsx
 import { Flex as Base } from 'rebass'
