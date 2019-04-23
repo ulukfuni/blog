@@ -41,9 +41,7 @@ function Bio() {
                                 }}
                             />
                             <p style={{ marginBottom: 0 }}>
-                                Written by <strong>{author}</strong>. First
-                                crack at blogging, not sure where this will lead
-                                but we will see.
+                                Written by <strong>{author}</strong>. Full Stack Web Developer residing in Orlando, Florida. Will write about tech but I also like other stuff.
                             </p>
                         </div>
                         <div
