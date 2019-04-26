@@ -1,6 +1,6 @@
 ---
 title: Music I'm Listening To (April 2019)
-date: '2019-04-25'
+date: '2019-04-29'
 categories:
     - Music
     - Hip-Hop
@@ -9,7 +9,7 @@ keywords:
     - Music
     - Hip-Hop
     - RnB
-description: Music I have been listening to recently - 4/25/19
+description: Music I have been listening to recently
 ---
 *I will list the albums I am listening to and then dive into which songs stand out to me.*
 
