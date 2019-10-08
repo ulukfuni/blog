@@ -1,6 +1,6 @@
 ---
 title: Getting Started with XState
-date: '2019-10-10'
+date: '2019-10-09'
 categories:
     - Dev
     - JavaScript
