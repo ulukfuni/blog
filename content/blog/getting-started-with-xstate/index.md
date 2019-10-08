@@ -114,7 +114,12 @@ const [ current, send ] = useMachine(ramMachine)
   onChange={(e) => send({ type:'INPUT_NAME', name: e.target.value })}
 />
 ...
-<Button variant="grey" onClick={() => send({ type: 'SUBMIT' })}>Search</Button>
+<Button
+  variant="grey"
+  onClick={() => send({ type: 'SUBMIT' })}
+>
+  Search
+</Button>
 ```
 
 I am using a custom React Hook `useMachine` for the XState machine and `send` is the function we will use to send transistions to our machine.
