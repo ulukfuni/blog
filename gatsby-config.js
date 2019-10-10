@@ -84,5 +84,18 @@ module.exports = {
           head: true,
         },
       },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Viet Nguyen Web Blog',
+        short_name: 'VN Blog',
+        start_url: '/',
+        background_color: "#ffffff",
+        theme_color: '#ffffff',
+        display: 'standalone',
+        crossOrigin: 'use-credentials',
+        icon: 'static/images/favicon.png'
+      }
+    }
   ],
 }
