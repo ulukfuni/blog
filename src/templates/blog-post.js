@@ -11,8 +11,9 @@ class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.markdownRemark
         const siteTitle = this.props.data.site.siteMetadata.title
-        const { previous, next } = this.props.pageContext
-
+				const { previous, next } = this.props.pageContext
+				// TODO: need to see if keywords is actually there for SEO component to use
+				console.log({ post })
         return (
             <Layout location={this.props.location} title={siteTitle}>
                 <SEO
