@@ -4,14 +4,12 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Pills from "../components/pills"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
-class BlogPostTemplate extends React.Component {
+class NowTemplate extends React.Component {
     render() {
         const post = this.props.data.markdownRemark
         const siteTitle = this.props.data.site.siteMetadata.title
-				const { previous, next } = this.props.pageContext
 
         return (
             <Layout location={this.props.location} title={siteTitle}>
@@ -22,28 +20,10 @@ class BlogPostTemplate extends React.Component {
                 />
                 <div style={{ marginBottom: rhythm(1) }}>
                     <h1>{post.frontmatter.title}</h1>
-                    <p
-                        style={{
-                            ...scale(-1 / 5),
-                            display: `block`,
-                            marginTop: rhythm(-1),
-                            marginBottom: 0,
-                        }}
-                    >
-                        {post.frontmatter.date}
-                    </p>
-                    {post.frontmatter.categories && (
-                        <Pills items={post.frontmatter.categories} />
-                    )}
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <hr
-                    style={{
-                        marginBottom: rhythm(1),
-                    }}
-                />
+                <hr style={{ marginBottom: rhythm(1), }} />
                 <Bio />
-
                 <ul
                     style={{
                         display: `flex`,
@@ -54,18 +34,10 @@ class BlogPostTemplate extends React.Component {
                     }}
                 >
                     <li>
-                        {previous && (
-                            <Link to={previous.fields.slug} rel="prev">
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        )}
+											<Link to={'/'}>Home</Link>
                     </li>
                     <li>
-                        {next && (
-                            <Link to={next.fields.slug} rel="next">
-                                {next.frontmatter.title} →
-                            </Link>
-                        )}
+
                     </li>
                 </ul>
             </Layout>
@@ -73,10 +45,10 @@ class BlogPostTemplate extends React.Component {
     }
 }
 
-export default BlogPostTemplate
+export default NowTemplate
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query NowPostBySlug($slug: String!) {
         site {
             siteMetadata {
                 title
