@@ -27,13 +27,6 @@ module.exports = {
       },
     },
     {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-            path: `${__dirname}/content/now`,
-            name: `now`,
-        }
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

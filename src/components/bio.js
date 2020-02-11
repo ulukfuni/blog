@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 import SocialIcons from "../constants/social"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -41,7 +41,8 @@ function Bio() {
                                 }}
                             />
                             <p style={{ marginBottom: 0 }}>
-                                Written by <strong>{author}</strong>. Full Stack Web Developer residing in Orlando, Florida. Will write about tech but I also like other stuff.
+                                Written by <strong>{author}</strong>. Full Stack Web Developer residing in Orlando, Florida.
+																<Link to="/now" style={{ marginLeft: rhythm(1/4)}}>What I'm Doing Now</Link> 
                             </p>
                         </div>
                         <div
