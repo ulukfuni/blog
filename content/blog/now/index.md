@@ -4,39 +4,42 @@ title: What I'm Doing Now
 
 ### **Career**
 
-- Working at Fortress Information Security using React, NodeJS, PostgresQL and AWS
-- Working on this blog of [mine](https://www.vietnguyen.site) (not sure what to write about next)
-- Working on learning React Native to make a Japan aggregation app of all the spots I visited for future visits
-- Bought a AWS course on Udemy and need to schedule a certification exam for it (and actually use the course)
+- Working at Red Ventures (Wordpress, VueJs, GoLang)
+- Working on this blog of [mine](https://www.vietnguyen.site)
+- Need to use this AWS course on Udemy that I bought and need to schedule a certification exam for it
 - Want to get more into Game Development with Javascript or Python. I got ideas I want to make!
 - Currently looking for part-time contracts to supplement income, if you got any Front end work, I am your [person](mailto:vtn1989@gmail.com?subject=Part%20Time%20Work%20Inquiry)!
 
 ### **Music**
 Listening to 
-- Denzel Curry & Kenny Beats - Unlocked
-- Tricot
-- Boldy James & Alchemist - The Price of Tea In China
-- FKA Twigs - MAGDALENE
-- BROCKHAMPTON - GINGER
-- Lo-Fi Hip Hop Youtube Channel 
+- Lianne La Havas - Lianne La Havas
+- Tkay Maidza - Last Year was Weird Vol 2.
+- Mach-Hommy - Mach's Hard Lemonade
+- Blu & Exile - Miles
+- Curren$y & Harry Fraud - The Outrunners
+- Brockhampton - Technical Difficulties (collection of friday loosies)
+- Lupe Fiasco & Kaelin Ellis - HOUSE
 
 ### **Fantasy Sports**
-Currently in 3 money leagues in Yahoo Fantasy Bball. All projected to make the fantasy playoffs and all projected to greatly disappoint me in the playoffs.
+NBA currently in (bubble) playoffs which means no fantasy. Wondering how NFL is going to get things done but going ahead and maybe doing some mocks for Fantasy football.
 
 ### **Games**
-Currently playing Slay the Spire, a difficult deck-building roguelite game, and BioShock Infinite, a single player FPS adventure. Having a blast with both. Contemplating on trying XCOM 2 (got through PS+ membership), Sims 4 (also through PS+ membership). Never tried either franchise before but its free so...
+Currently just playing Picross on the ole 3DS and trying the Darkest Dungeon on the PS Vita. Prior to the move, I packed up my PS4 and Switch way too early and still have not set them up to play. Looking forward to having them back but haven't really gamed that much in a minute.
 
 ### **Shows**
-Currently watching reruns of Bob's Burgers, Community and Brooklyn 99. Occasionally will tune into random anime (No Game No Life on Netflix, Vinland Saga on Amazon Prime)
+Currently watching reruns of Bob's Burgers. That's it. My life has become a Bob's Burgers episode.
 
 ### **Looking Forward To**
-- hanging out with my cat and my wife on quiet nights and weekends
-- some calm mindset and time so that I can get through the catalog of books I got saved on my Kindle
-- the next cold front (hoping for some more sweater weather)
+- Fall Weather since that is a thing here in North Carolina compared to Florida
+- Seeing and playing with snow for the first time
+- Possible visits from friends and family
+- Exploring hiking trails around where I live
+- The turn of the year cuz 2020 aint it
+- Learning more at work and maybe meeting my coworkers in person
 
 ### **Not Looking Forward To**
-- tax season -_-
-- pollen season (somehow started early here in Florida)
-- after winter Florida heatwave
+- Driving in snow whenever that will be
+- Seeing many many election ads
+- Homesickness (it's bound to happen)
 
-### **Last Updated** : February 11, 2020
+### **Last Updated** : August 31, 2020
