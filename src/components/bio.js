@@ -41,7 +41,7 @@ function Bio() {
                                 }}
                             />
                             <p style={{ marginBottom: 0 }}>
-                                Written by <strong>{author}</strong>. Full Stack Web Developer residing in Orlando, Florida.
+                                Written by <strong>{author}</strong>. Full Stack Web Developer residing in Charlotte, NC.
 																<Link to="/now" style={{ marginLeft: rhythm(1/4)}}>What I'm Doing Now</Link> 
                             </p>
                         </div>
