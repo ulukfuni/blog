@@ -21,6 +21,6 @@ I want to get back to writing and learning in public again. I am paying for this
 
 To make myself accountable, I would like to make a post comparing all the different state management tools we have available to use in the frontend. I have already explored [Xstate](https://www.vietnguyen.site/getting-started-with-xstate/) but it definitely needs an update.
 
-Another post I want to make is to explore Prisma. After going deep into Django, I now know the power of ORMs. I always thought it harder to keep another mental model on top of the DB but not needing to jump between SQL language and your backend language of choice is quite neat.
+Another post I want to make is to explore [Prisma](https://www.prisma.io/). After going deep into [Django](https://www.djangoproject.com/), I now know the power of ORMs. I always thought it harder to keep another mental model on top of the DB but not needing to jump between SQL language and your backend language of choice is quite neat.
 
 That's all the ideas I had for now. We will see where we are at in a few.
