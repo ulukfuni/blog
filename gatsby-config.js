@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Viet Nguyen Blog`,
+    title: `The Life I Live`,
     author: `Viet Nguyen`,
     description: `Viet Nguyen's Personal Blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -50,7 +50,56 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-feed`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                site {
+                  siteMetadata {
+                    title
+                    description
+                    siteUrl
+                    site_url: siteUrl
+                  }
+                }
+                allMarkdownRemark(
+                  sort: { frontmatter: { date: DESC } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Viet Nguyen Blog RSS Feed",
+          },
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
@@ -60,10 +109,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GA_TRACKING_ID,
-        head: true,
+        trackingIds: process.env.GA_TRACKING_ID
+          ? [process.env.GA_TRACKING_ID]
+          : [],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
