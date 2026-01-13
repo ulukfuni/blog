@@ -1,6 +1,6 @@
 ---
 title: The Day The World Turned Red
-date: '2025-12-22'
+date: '2026-1-12'
 categories:
     - update
     - story
@@ -50,4 +50,4 @@ It took a couple of months but I finally settled on some food that followed all 
 
 I believe now I am doing pretty well. Diet is good, health is hold steady. Doctor visits are less frequent. I will just need to continue on this path and adapt as things change.
 
-Looking back at the sequence of events that brought me here was a good reflection on my health and the journey thus far. I know I am secretive in what I put out in the world and I don't want a pity party whenever I tell this whole story. Thats the reason why I have keep this under wraps. I hope that this telling of this slice of life of mine encourages anyone to do that checkup that they have been putting off. You never know what you will find and how your life will change.
+Looking back at the sequence of events that brought me here was a good reflection on my health and the journey thus far. August 7, 2024 will be a day of remembrance. I know I am secretive in what I put out in the world and I don't want a pity party whenever I tell this whole story. Thats the reason why I have keep this under wraps. I hope that this telling of this slice of life of mine encourages anyone to do that checkup that they have been putting off. You never know what you will find and how your life will change.
