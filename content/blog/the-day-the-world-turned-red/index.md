@@ -1,6 +1,6 @@
 ---
 title: The Day The World Turned Red
-date: '2026-1-12'
+date: '2026-01-12'
 categories:
     - update
     - story
