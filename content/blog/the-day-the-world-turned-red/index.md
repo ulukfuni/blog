@@ -28,7 +28,9 @@ Labs came back confirming what we already knew, that my liver was not doing so g
 
 Now, I definitely had my fair share of alcohol in my life but I do not believe it to be the level of a raging alcoholic. Some specialists came to see me and try and diagnose why my liver is the way it is. Officially, my liver had deep scarring (cirrhosis). The liver can't come back from something like this. They all asked me about my drinking habits. I do not drink nearly enough to qualify for alcoholic liver failure. The next one was about family history of leukemia. Thats a no from me (and my family) as well. Also had to rule out Hepatitis as well. So what could it be?
 
-I had no idea and they (the doctors) had no idea so I was giving blood around the clock in order for them to test it and see if they can come to any conclusions while the GI doctor came around and came asking questions. This all  happened in the span of 3 days.
+I had no idea and they (the doctors) had no idea so I was giving blood around the clock in order for them to test it and see if they can come to any conclusions while the GI doctor came around and came asking questions. This all happened in the span of 3 days.
+
+I do have to mention the sporadic around-the-clock nurse schedule they had me on. Every few hours (maybe 3-4), I would be met with 2 nurses for blood draws and vital checks. It did not matter if it was in the middle of the night or if I was in the middle of eating. It was very odd like if they did not check on me, I would pass away or something. I wish I had the nerve to ask to space it out a bit as I could not get any proper rest in.
 
 I came to realize that there is a big mental toll when it comes to being admitted in a hospital and there does not seem to be an end in sight. It really is a grind when you do not know when you will leave a place. It is fairly similar to being at an airport. The food is adequate, the walls and smells are non offensive but drab. The people (in this instance, nurses and doctors) are all just doing their jobs. And then there's you, waiting for answers and basically under observation like a guinea pig.
 
