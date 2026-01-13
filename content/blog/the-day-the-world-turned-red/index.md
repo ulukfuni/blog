@@ -5,7 +5,7 @@ categories:
     - update
     - story
     - life
-description: A story that must be retold again and again
+description: A story about health
 keywords:
     - writing
     - update
