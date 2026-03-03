@@ -30,6 +30,78 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
     const metaType = type || `website`
     const url = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
+    const metaTags = [
+        {
+            name: `description`,
+            content: metaDescription,
+        },
+        {
+            property: `og:title`,
+            content: title,
+        },
+        {
+            property: `og:description`,
+            content: metaDescription,
+        },
+        {
+            property: `og:type`,
+            content: metaType,
+        },
+    ]
+        .concat(
+            url
+                ? [
+                      {
+                          property: `og:url`,
+                          content: url,
+                      },
+                  ]
+                : []
+        )
+        .concat([
+            {
+                name: `twitter:card`,
+                content: `summary`,
+            },
+            {
+                name: `twitter:creator`,
+                content: site.siteMetadata.author,
+            },
+            {
+                name: `twitter:title`,
+                content: title,
+            },
+            {
+                name: `twitter:description`,
+                content: metaDescription,
+            },
+        ])
+        .concat(
+            image
+                ? [
+                      {
+                          property: `og:image`,
+                          content: image,
+                      },
+                      {
+                          name: `twitter:image`,
+                          content: image,
+                      },
+                  ]
+                : []
+        )
+        .concat(
+            keywords.length > 0
+                ? [
+                      {
+                          name: `keywords`,
+                          content: keywords.join(`, `),
+                      },
+                  ]
+                : []
+        )
+        .concat(meta)
+
     return (
         <Helmet
             htmlAttributes={{
@@ -47,69 +119,7 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
                       ]
                     : []
             }
-            meta={[
-                {
-                    name: `description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:title`,
-                    content: title,
-                },
-                {
-                    property: `og:description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:type`,
-                    content: metaType,
-                },
-                url
-                    ? {
-                          property: `og:url`,
-                          content: url,
-                      }
-                    : {},
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: metaDescription,
-                },
-            ]
-                .concat(
-                    image
-                        ? [
-                              {
-                                  property: `og:image`,
-                                  content: image,
-                              },
-                              {
-                                  name: `twitter:image`,
-                                  content: image,
-                              },
-                          ]
-                        : []
-                )
-                .concat(
-                    keywords.length > 0
-                        ? {
-                              name: `keywords`,
-                              content: keywords.join(`, `),
-                          }
-                        : []
-                )
-                .concat(meta)}
+            meta={metaTags}
         />
     )
 }

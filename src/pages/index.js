@@ -13,7 +13,7 @@ function BlogIndex({ data, location }) {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title="The Life I Live"
+                title="Home"
                 description="Viet Nguyen's personal blog on software development, life, and stories."
                 keywords={[`viet nguyen`, `blog`, `dev`, `life`, `basketball`]}
                 pathname={location.pathname}
