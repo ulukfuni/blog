@@ -2,12 +2,12 @@
 title: The Move
 date: '2020-08-31'
 categories:
-	- life
+    - life
 keywords:
-- moving
-- new
-- fresh
-- change
+    - moving
+    - new
+    - fresh
+    - change
 description: Moving and other thoughts.
 ---
 

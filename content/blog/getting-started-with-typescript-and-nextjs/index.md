@@ -2,10 +2,10 @@
 title: Getting Started with TypeScript and NextJs
 date: '2019-04-23'
 categories:
-    - Dev
-    - JavaScript
-    - React
-    - TypeScript
+    - dev
+    - javascript
+    - react
+    - typescript
 keywords:
     - developer
     - tech

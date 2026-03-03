@@ -2,12 +2,12 @@
 title: Failing Fast
 date: '2019-06-10'
 categories:
-	- life
+    - life
 keywords:
-- life
-- failing
-- failure
-- introspection
+    - life
+    - failing
+    - failure
+    - introspection
 description: A concept in programming really make me think about life.
 ---
 

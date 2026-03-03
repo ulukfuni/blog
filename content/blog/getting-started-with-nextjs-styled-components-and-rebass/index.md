@@ -2,12 +2,12 @@
 title: Getting Started with NextJS, Styled Components and Rebass
 date: '2019-04-10'
 categories:
-    - Dev
-    - JavaScript
-    - React
-    - CSSinJS
-    - Boilerplate
-    - NextJS
+    - dev
+    - javascript
+    - react
+    - css-in-js
+    - boilerplate
+    - nextjs
 keywords:
     - developer
     - tech

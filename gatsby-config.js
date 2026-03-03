@@ -5,8 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `The Life I Live`,
     author: `Viet Nguyen`,
-    description: `Viet Nguyen's Personal Blog`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Viet Nguyen's personal blog about software development, life, stories, and more`,
+    siteUrl: `https://www.vietnguyen.site`,
     social: {
       twitter: `ulukfuni`,
     },
@@ -131,6 +131,7 @@ module.exports = {
         crossOrigin: 'use-credentials',
         icon: 'static/images/favicon.png'
       }
-    }
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }

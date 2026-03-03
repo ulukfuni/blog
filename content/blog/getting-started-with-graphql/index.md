@@ -2,9 +2,9 @@
 title: Getting Started With GraphQL
 date: '2019-07-30'
 categories:
-    - JavaScript
-    - GraphQL
-    - Learning
+    - dev
+    - javascript
+    - graphql
 keywords:
     - javascript
     - nodejs
