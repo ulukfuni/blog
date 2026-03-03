@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, pathname, image, type }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                         title
                         description
                         author
+                        siteUrl
                     }
                 }
             }
@@ -26,6 +27,80 @@ function SEO({ description, lang, meta, keywords, title }) {
     )
 
     const metaDescription = description || site.siteMetadata.description
+    const metaType = type || `website`
+    const url = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+
+    const metaTags = [
+        {
+            name: `description`,
+            content: metaDescription,
+        },
+        {
+            property: `og:title`,
+            content: title,
+        },
+        {
+            property: `og:description`,
+            content: metaDescription,
+        },
+        {
+            property: `og:type`,
+            content: metaType,
+        },
+    ]
+        .concat(
+            url
+                ? [
+                      {
+                          property: `og:url`,
+                          content: url,
+                      },
+                  ]
+                : []
+        )
+        .concat([
+            {
+                name: `twitter:card`,
+                content: `summary`,
+            },
+            {
+                name: `twitter:creator`,
+                content: site.siteMetadata.author,
+            },
+            {
+                name: `twitter:title`,
+                content: title,
+            },
+            {
+                name: `twitter:description`,
+                content: metaDescription,
+            },
+        ])
+        .concat(
+            image
+                ? [
+                      {
+                          property: `og:image`,
+                          content: image,
+                      },
+                      {
+                          name: `twitter:image`,
+                          content: image,
+                      },
+                  ]
+                : []
+        )
+        .concat(
+            keywords.length > 0
+                ? [
+                      {
+                          name: `keywords`,
+                          content: keywords.join(`, `),
+                      },
+                  ]
+                : []
+        )
+        .concat(meta)
 
     return (
         <Helmet
@@ -34,49 +109,17 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
-            meta={[
-                {
-                    name: `description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:title`,
-                    content: title,
-                },
-                {
-                    property: `og:description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: metaDescription,
-                },
-            ]
-                .concat(
-                    keywords.length > 0
-                        ? {
-                              name: `keywords`,
-                              content: keywords.join(`, `),
-                          }
-                        : []
-                )
-                .concat(meta)}
+            link={
+                url
+                    ? [
+                          {
+                              rel: `canonical`,
+                              href: url,
+                          },
+                      ]
+                    : []
+            }
+            meta={metaTags}
         />
     )
 }
@@ -85,6 +128,7 @@ SEO.defaultProps = {
     lang: `en`,
     meta: [],
     keywords: [],
+    type: `website`,
 }
 
 SEO.propTypes = {
@@ -92,6 +136,9 @@ SEO.propTypes = {
     lang: PropTypes.string,
     meta: PropTypes.array,
     keywords: PropTypes.arrayOf(PropTypes.string),
+    pathname: PropTypes.string,
+    image: PropTypes.string,
+    type: PropTypes.string,
     title: PropTypes.string.isRequired,
 }
 

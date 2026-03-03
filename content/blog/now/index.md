@@ -1,5 +1,11 @@
 ---
 title: What I'm Doing Now
+description: A living now page sharing what I'm currently working on, playing, and thinking about.
+keywords:
+    - now
+    - update
+    - life
+    - work
 ---
 
 ### **Career**

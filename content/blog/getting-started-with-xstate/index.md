@@ -2,17 +2,17 @@
 title: Getting Started with XState
 date: '2019-10-09'
 categories:
-    - Dev
-    - JavaScript
-    - React
-    - State Machine
+    - dev
+    - javascript
+    - react
+    - state-machine
 keywords:
     - developer
     - tech
     - javascript
     - state machine
     - xstate
-description: My experience with state machines using XState.
+description: My experience using XState state machines in React.
 ---
 
 > TL;DR State machines are an interesting topic that I have not been properly introduced to even though I probably, unintentionally, use it in alot of my programming tasks/projects. I am still a bit inexperienced with modeling my UI to a state machine but I hope [these](https://css-tricks.com/using-react-and-xstate-to-build-a-sign-in-form/) [links](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/) [that](https://xstate.js.org/docs/) [I](https://xstate.js.org/viz/) used will help you in using state machines in JS, particularly with the xstate library and react.

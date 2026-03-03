@@ -15,7 +15,9 @@ function NowTemplate({ data, location }) {
             <SEO
                 title={post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
-                keywords={post.frontmatter.keywords}
+                keywords={post.frontmatter.keywords || []}
+                pathname={location.pathname}
+                type="website"
             />
             <div style={{ marginBottom: rhythm(1) }}>
                 <h1>{post.frontmatter.title}</h1>
@@ -62,6 +64,7 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 description
+                keywords
             }
         }
     }

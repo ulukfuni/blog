@@ -13,8 +13,11 @@ function BlogIndex({ data, location }) {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title="All posts"
-                keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+                title="Home"
+                description="Viet Nguyen's personal blog on software development, life, and stories."
+                keywords={[`viet nguyen`, `blog`, `dev`, `life`, `basketball`]}
+                pathname={location.pathname}
+                type="website"
             />
             <Bio />
             {posts.map(({ node }) => {
