@@ -6,42 +6,44 @@ title: What I'm Doing Now
 
 - Working as a Senior Frontend Engineer for Novaprime, a mortgage technology startup
 - Working on this blog of [mine](https://www.vietnguyen.site)
-- Want to get more into Game Development with Javascript or Python. I got ideas I want to make!
+- Working on [HoopSim](https://hoopsim.xyz)
 - Currently looking for remote part-time contracts to supplement income, if you need any Front-end JS/TS work, I am your [person](mailto:vtn1989@gmail.com?subject=Part%20Time%20Work%20Inquiry)!
 
 ### **Music**
 Listening to 
-- Vanisher, Horizon Scraper by Quadeca
-- Eusexua by FKA Twigs
-- Revengeseekerz by Jane Remover
-- there's more but I dont feel like writing it out
+- Kpop (never thought this would happen, there's some good stuff here if you dig)
+- JCole - The Fall Off
+- Baby Keem - Ca$ino
 - Anything jersey club mix
 
 ### **Games**
-Slowly going thru Borderlands 4. Very slowly. Bringing open world-ness to the borderlands universe has been real nice.
+- Still Slowly going thru Borderlands 4. Very slowly.
+- Started Mewgenics. This is great but haven't gotten any OP cats yet
+- Idle Obelisk Miner on mobile, quick thing to check just in and click things and watch things go woosh
 
 ### **Shows**
-Still watching Bob's Burger as background noise. Have yet to pick up anything new. Sort of fallen off watching things and keeping up with shows.
+- Still watching Bob's Burger as background noise.
+- Rewatch of Sherlock Holmes (the one with Dr. Strange guy)
+- Started and fell off Ted Lasso
 
-### **Health** (new)
-This actually requires a separate post but health wise everything is stable but I really do need to write an update on this because its been a journey.
+### **Health**
+Everything is stable now, healthcare system is not real friendly to navigate but things are good for now.
 
 ### **Outlook**
-- Since last updated in 2023, AI has taken over alot of my interest. I feel like its still early days but AI has unlocked alot for me in terms of learning, building, doing, etc.
-- Real bullish on AI
-- Also since last update in 2023, I have really honed in on improving my health with supplements, changing diet and trying to optimize sleep. Super bullish on doing these to further improve my life.
+- AI is zooming and I am having fun with it. My ideas are good but my execution is getting better with AI's help.
+- The world though, its not looking so good. 
 
 ### **Looking Forward To**
-- Japan/Korea in Q4 (funnily enough this was also in my last NOW update)
-- overall vacationing
-- relieving some burnout
+- Slow times
+- Building things
+- Launching things
 
 ### **Not Looking Forward To**
-- packing
-- cleaning
-- travel prep
-- leaving my cats
+- Summer time weather -_-
+- Tax season
+- Hurricane season
+- Lawn maintenance
 
 
 
-### **Last Updated** : December 6, 2025
+### **Last Updated** : March 2, 2026
