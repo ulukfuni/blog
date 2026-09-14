@@ -58,7 +58,9 @@ When editing posts, agents should:
 - Leave `draft: true` until the user is ready to publish.
 
 A JSON index of public posts is written to `/posts.json` on build (and during
-`gatsby develop` into `public/posts.json`). It excludes `/now` and drafts.
+`gatsby develop` into `public/posts.json`). It excludes `/now`, `/work`, and
+drafts. Standalone markdown pages (`/now`, `/work`) are also omitted from the
+home list, RSS, category archives, and prev/next.
 
 ---
 

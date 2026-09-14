@@ -72,6 +72,9 @@ function Layout({ location, title, children }) {
                     <Link to="/now" style={{ marginRight: rhythm(1 / 2) }}>
                         Now
                     </Link>
+                    <Link to="/work" style={{ marginRight: rhythm(1 / 2) }}>
+                        Work
+                    </Link>
                     <a href="/rss.xml">RSS</a>
                 </nav>
                 {header}
@@ -82,6 +85,8 @@ function Layout({ location, title, children }) {
                 <Link to="/">The Life I Live</Link>
                 {` · `}
                 <Link to="/now">Now</Link>
+                {` · `}
+                <Link to="/work">Work</Link>
                 {` · `}
                 <a href="/rss.xml">RSS</a>
             </footer>
