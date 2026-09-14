@@ -41,10 +41,13 @@ Use `docs/blog-style-guide.md` as the single source of truth for:
 
 - Required frontmatter fields:
   - `title`, `date`, `categories`, `description`, `keywords`.
+- Optional `draft: true` to keep a post unpublished. New posts from
+  `npm run new-post` start as drafts.
 - Date format: `date: 'YYYY-MM-DD'`.
 - Categories:
   - YAML list, lowercase, 1–5 items.
   - Examples: `dev`, `life`, `story`, `career`, `travel`, `health`, `devlog`.
+  - Public archive pages live at `/category/<name>/`.
 - Keywords:
   - YAML list, SEO/discovery oriented, specific to the post.
 
@@ -52,6 +55,10 @@ When editing posts, agents should:
 
 - Normalize category casing to lowercase.
 - Ensure `description` and `keywords` are present and meaningful.
+- Leave `draft: true` until the user is ready to publish.
+
+A JSON index of public posts is written to `/posts.json` on build (and during
+`gatsby develop` into `public/posts.json`). It excludes `/now` and drafts.
 
 ---
 

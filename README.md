@@ -32,27 +32,27 @@ npm run serve
 
 ## Writing posts
 
-Posts live under `content/blog/<slug>/index.md`.
+Posts live under `content/blog/<slug>/index.md`. New posts start as **drafts**
+and stay off the public site until you publish them.
 
 ### Quick creation script
 
-Use the helper script to create a new post directory and starter frontmatter:
-
 ```bash
-node scripts/create-post.js "My New Post Title"
+npm run new-post -- "My New Post Title"
 ```
 
-This will create:
+This creates `content/blog/my-new-post-title/index.md` with `draft: true`.
+Preview it locally with `npm run develop` (open `/{slug}/`). When it's ready,
+set `draft: false` (or remove the field) and ship.
 
-```text
-content/blog/my-new-post-title/index.md
-```
-
-Then open the file and fill in:
+Then fill in:
 
 - `categories` – 1–5 categories (lowercase, like `dev`, `life`, `story`, `devlog`)
 - `description` – short summary for SEO/previews
 - `keywords` – a few SEO/search keywords
+
+Categories become browsable at `/category/<name>/` (pills on posts and the
+home page link there).
 
 For full guidance on structure, tone, and frontmatter fields, see:
 

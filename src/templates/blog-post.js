@@ -11,6 +11,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
     const post = data.markdownRemark
     const siteTitle = data.site.siteMetadata.title
     const { previous, next } = pageContext
+    const url = `${data.site.siteMetadata.siteUrl}${location.pathname}`
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -20,6 +21,26 @@ function BlogPostTemplate({ data, pageContext, location }) {
                 keywords={post.frontmatter.keywords || []}
                 pathname={location.pathname}
                 type="article"
+                jsonLd={{
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    headline: post.frontmatter.title,
+                    description:
+                        post.frontmatter.description || post.excerpt,
+                    datePublished: post.frontmatter.isoDate,
+                    dateModified: post.frontmatter.isoDate,
+                    url,
+                    author: {
+                        "@type": "Person",
+                        name: data.site.siteMetadata.author,
+                    },
+                    publisher: {
+                        "@type": "Person",
+                        name: data.site.siteMetadata.author,
+                    },
+                    mainEntityOfPage: url,
+                    keywords: (post.frontmatter.keywords || []).join(`, `),
+                }}
             />
             <div style={{ marginBottom: rhythm(1) }}>
                 <h1>{post.frontmatter.title}</h1>
@@ -32,6 +53,8 @@ function BlogPostTemplate({ data, pageContext, location }) {
                     }}
                 >
                     {post.frontmatter.date}
+                    {post.timeToRead ? ` · ${post.timeToRead} min read` : null}
+                    {post.frontmatter.draft ? ` · Draft` : null}
                 </p>
                 {post.frontmatter.categories && (
                     <Pills items={post.frontmatter.categories} />
@@ -81,18 +104,22 @@ export const pageQuery = graphql`
             siteMetadata {
                 title
                 author
+                siteUrl
             }
         }
         markdownRemark(fields: { slug: { eq: $slug } }) {
             id
             excerpt(pruneLength: 160)
             html
+            timeToRead
             frontmatter {
                 categories
                 title
                 date(formatString: "MMMM DD, YYYY")
+                isoDate: date
                 description
                 keywords
+                draft
             }
         }
     }

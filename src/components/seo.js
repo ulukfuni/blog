@@ -1,6 +1,6 @@
 /**
  * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
+ * Gatsby's useStaticQuery React hook
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
@@ -10,7 +10,17 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, pathname, image, type }) {
+function SEO({
+    description,
+    lang,
+    meta,
+    keywords,
+    title,
+    pathname,
+    image,
+    type,
+    jsonLd,
+}) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -20,6 +30,9 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
                         description
                         author
                         siteUrl
+                        social {
+                            twitter
+                        }
                     }
                 }
             }
@@ -29,6 +42,9 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
     const metaDescription = description || site.siteMetadata.description
     const metaType = type || `website`
     const url = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+    const twitterHandle = site.siteMetadata.social.twitter
+        ? `@${site.siteMetadata.social.twitter}`
+        : site.siteMetadata.author
 
     const metaTags = [
         {
@@ -61,11 +77,11 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
         .concat([
             {
                 name: `twitter:card`,
-                content: `summary`,
+                content: image ? `summary_large_image` : `summary`,
             },
             {
                 name: `twitter:creator`,
-                content: site.siteMetadata.author,
+                content: twitterHandle,
             },
             {
                 name: `twitter:title`,
@@ -102,6 +118,20 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
         )
         .concat(meta)
 
+    const links = []
+    if (url) {
+        links.push({
+            rel: `canonical`,
+            href: url,
+        })
+    }
+    links.push({
+        rel: `alternate`,
+        type: `application/rss+xml`,
+        title: `${site.siteMetadata.title} RSS Feed`,
+        href: `${site.siteMetadata.siteUrl}/rss.xml`,
+    })
+
     return (
         <Helmet
             htmlAttributes={{
@@ -109,18 +139,15 @@ function SEO({ description, lang, meta, keywords, title, pathname, image, type }
             }}
             title={title}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
-            link={
-                url
-                    ? [
-                          {
-                              rel: `canonical`,
-                              href: url,
-                          },
-                      ]
-                    : []
-            }
+            link={links}
             meta={metaTags}
-        />
+        >
+            {jsonLd && (
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
+            )}
+        </Helmet>
     )
 }
 
@@ -140,6 +167,7 @@ SEO.propTypes = {
     image: PropTypes.string,
     type: PropTypes.string,
     title: PropTypes.string.isRequired,
+    jsonLd: PropTypes.object,
 }
 
 export default SEO

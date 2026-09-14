@@ -23,24 +23,11 @@ function NowTemplate({ data, location }) {
                 <h1>{post.frontmatter.title}</h1>
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr style={{ marginBottom: rhythm(1), }} />
+            <hr style={{ marginBottom: rhythm(1) }} />
             <Bio />
-            <ul
-                style={{
-                    display: `flex`,
-                    flexWrap: `wrap`,
-                    justifyContent: `space-between`,
-                    listStyle: `none`,
-                    padding: 0,
-                }}
-            >
-                <li>
-                    <Link to={'/'}>Home</Link>
-                </li>
-                <li>
-
-                </li>
-            </ul>
+            <p>
+                <Link to="/">← Home</Link>
+            </p>
         </Layout>
     )
 }
@@ -60,9 +47,7 @@ export const pageQuery = graphql`
             excerpt(pruneLength: 160)
             html
             frontmatter {
-                categories
                 title
-                date(formatString: "MMMM DD, YYYY")
                 description
                 keywords
             }

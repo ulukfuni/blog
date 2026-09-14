@@ -24,14 +24,15 @@ Use this skill when:
 2. Run the creation script from the project root:
 
    ```bash
-   node scripts/create-post.js "Post Title"
+   npm run new-post -- "Post Title"
    ```
 
 3. Note the created path from the script output
-   (e.g. `content/blog/my-new-post-title/index.md`).
+   (e.g. `content/blog/my-new-post-title/index.md`). The post starts as
+   `draft: true` and will not appear on the public site until published.
 4. Open the new `index.md` and, using `docs/blog-style-guide.md`:
    - Help the user fill in `categories`, `description`, and `keywords`.
    - Optionally draft an outline or starter paragraphs if asked.
 5. Suggest using the `cowriter` skill next if the user wants help writing the
-   full post content.
+   full post content. Keep `draft: true` until they ask to publish.
 

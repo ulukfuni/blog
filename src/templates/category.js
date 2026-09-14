@@ -1,56 +1,44 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pills from "../components/pills"
 import { rhythm } from "../utils/typography"
 import { categorySlug, isListedPost } from "../utils/posts"
 
-function BlogIndex({ data, location }) {
+function CategoryTemplate({ data, pageContext, location }) {
     const siteTitle = data.site.siteMetadata.title
-    const showDrafts = process.env.NODE_ENV !== `production`
+    const { category } = pageContext
     const posts = data.allMarkdownRemark.edges.filter(({ node }) => {
-        if (node.fields.slug === `/now/`) {
+        if (!isListedPost(node)) {
             return false
         }
-        if (node.frontmatter.draft && !showDrafts) {
-            return false
-        }
-        return true
+        return (node.frontmatter.categories || []).some(
+            name => categorySlug(name) === category
+        )
     })
-    const categoryCounts = new Map()
-    data.allMarkdownRemark.edges
-        .filter(({ node }) => isListedPost(node))
-        .forEach(({ node }) => {
-            ;(node.frontmatter.categories || []).forEach(name => {
-                const key = categorySlug(name)
-                if (key) {
-                    categoryCounts.set(key, (categoryCounts.get(key) || 0) + 1)
-                }
-            })
-        })
-    const categories = Array.from(categoryCounts.entries())
-        .filter(([, count]) => count >= 2)
-        .map(([name]) => name)
-        .sort()
 
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title="Home"
-                description="Viet Nguyen's personal blog on software development, life, and stories."
-                keywords={[`viet nguyen`, `blog`, `dev`, `life`, `basketball`]}
+                title={`${category} posts`}
+                description={`Posts about ${category} on ${siteTitle}.`}
+                keywords={[category]}
                 pathname={location.pathname}
                 type="website"
             />
-            <Bio />
-            {categories.length > 0 && (
-                <div style={{ marginBottom: rhythm(1.5) }}>
-                    <Pills items={categories} />
-                </div>
-            )}
+            <h1
+                style={{
+                    marginBottom: rhythm(1 / 4),
+                    textTransform: `capitalize`,
+                }}
+            >
+                {category}
+            </h1>
+            <p style={{ marginBottom: rhythm(1.5) }}>
+                {posts.length} {posts.length === 1 ? `post` : `posts`}
+            </p>
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
@@ -72,7 +60,6 @@ function BlogIndex({ data, location }) {
                             {node.timeToRead
                                 ? ` · ${node.timeToRead} min read`
                                 : null}
-                            {node.frontmatter.draft ? ` · Draft` : null}
                         </small>
                         {node.frontmatter.categories && (
                             <div style={{ marginTop: rhythm(1 / 4) }}>
@@ -86,18 +73,18 @@ function BlogIndex({ data, location }) {
                                     node.excerpt,
                             }}
                         ></p>
-                        <Link to={node.fields.slug}>Read More</Link>
                     </div>
                 )
             })}
+            <Link to="/">← All posts</Link>
         </Layout>
     )
 }
 
-export default BlogIndex
+export default CategoryTemplate
 
 export const pageQuery = graphql`
-    query {
+    query CategoryPage {
         site {
             siteMetadata {
                 title
