@@ -8,7 +8,11 @@ This guide was derived from existing posts in `content/blog/`. Use it to keep ne
 
 - **Required fields:** `title`, `date`, `categories`, `description`, `keywords`
 - **Date:** Use quoted ISO date: `date: 'YYYY-MM-DD'`
-- **Categories:** YAML list, 2-space indent. Use 1–5 items; mix of topic and tone (e.g. `dev`, `life`, `story`, `JavaScript`). Casing is inconsistent in the archive (both `dev` and `Dev` appear); prefer **lowercase** for new posts.
+- **Drafts:** New posts from `npm run new-post` include `draft: true`. Drafts
+  are omitted from the home page, category pages, RSS, and `/posts.json`. In
+  local `npm run develop`, you can still open the post URL to preview. Set
+  `draft: false` (or delete the field) to publish.
+- **Categories:** YAML list, 2-space indent. Use 1–5 items; mix of topic and tone (e.g. `dev`, `life`, `story`, `JavaScript`). Casing is inconsistent in the archive (both `dev` and `Dev` appear); prefer **lowercase** for new posts. Each category is a public page at `/category/<name>/`.
 - **Keywords:** YAML list, 2-space indent. SEO- and discovery-oriented; can overlap with categories.
 - **Description:** One line; used for SEO and previews. No period at end.
 
@@ -18,6 +22,7 @@ Example:
 ---
 title: Your Post Title Here
 date: '2026-03-02'
+draft: false
 categories:
     - dev
     - devlog
@@ -80,6 +85,7 @@ keywords:
 ## Checklist before publishing
 
 - [ ] Frontmatter complete (title, date, categories, description, keywords)
+- [ ] `draft: false` (or the field removed) when the post should go live
 - [ ] First paragraph or TL;DR sets expectations
 - [ ] Headings make the post scannable
 - [ ] Images have descriptive alt text

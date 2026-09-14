@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,10 +9,15 @@ function NotFoundPage({ data, location }) {
 
     return (
         <Layout location={location} title={siteTitle}>
-            <SEO title="404: Not Found" />
+            <SEO
+                title="404: Not Found"
+                description="This page does not exist."
+                pathname={location.pathname}
+            />
             <h1>Not Found</h1>
             <p>
-                You just hit a route that doesn&#39;t exist... the sadness.
+                That page doesn't exist. Head back to the{` `}
+                <Link to="/">blog</Link>.
             </p>
         </Layout>
     )

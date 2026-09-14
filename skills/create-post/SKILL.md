@@ -17,6 +17,7 @@ The `index.md` should follow this format:
 ---
 title: [TITLE]
 date: '[YYYY-MM-DD]'
+draft: true
 categories:
     - [CATEGORY]
 description: [DESCRIPTION]
@@ -30,6 +31,7 @@ Start writing your post here...
 ## Steps
 
 1. **Ask** the user for the title of the post (if not provided).
-2. **Run** the creation script: `node scripts/create-post.js "[TITLE]"`
-3. **Inform** the user that the post has been created and show the path.
+2. **Run** the creation script: `npm run new-post -- "[TITLE]"`
+3. **Inform** the user that a draft was created and show the path.
 4. **Offer** to help write the content or fill in categories/description.
+   Keep `draft: true` until the user is ready to publish.

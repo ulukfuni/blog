@@ -5,9 +5,10 @@ import { rhythm, scale } from "../utils/typography"
 
 function Layout({ location, title, children }) {
     const rootPath = `${__PATH_PREFIX__}/`
+    const isRoot = location.pathname === rootPath
     let header
 
-    if (location.pathname === rootPath) {
+    if (isRoot) {
         header = (
             <h1
                 style={{
@@ -34,6 +35,7 @@ function Layout({ location, title, children }) {
                 style={{
                     fontFamily: `Montserrat, sans-serif`,
                     marginTop: 0,
+                    marginBottom: rhythm(1 / 2),
                 }}
             >
                 <Link
@@ -58,12 +60,30 @@ function Layout({ location, title, children }) {
                 padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
         >
-            <header>{header}</header>
+            <header>
+                <nav
+                    style={{
+                        ...scale(-1 / 5),
+                        display: `flex`,
+                        justifyContent: `flex-end`,
+                        marginBottom: rhythm(1 / 2),
+                    }}
+                >
+                    <Link to="/now" style={{ marginRight: rhythm(1 / 2) }}>
+                        Now
+                    </Link>
+                    <a href="/rss.xml">RSS</a>
+                </nav>
+                {header}
+            </header>
             <main>{children}</main>
             <footer>
-                © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
+                © {new Date().getFullYear()} {` `}
+                <Link to="/">The Life I Live</Link>
+                {` · `}
+                <Link to="/now">Now</Link>
+                {` · `}
+                <a href="/rss.xml">RSS</a>
             </footer>
         </div>
     )

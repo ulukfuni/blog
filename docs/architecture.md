@@ -11,6 +11,7 @@ AI agents.
 - `content/blog/<slug>/index.md`
   - Markdown files with YAML frontmatter at the top.
   - Required frontmatter fields: `title`, `date`, `categories`, `description`, `keywords`.
+  - Optional `draft: true` keeps a post off public listings until publish.
   - Body is written in Markdown and can include images, code blocks, etc.
 - `content/assets`
   - Shared images used by posts and pages.
@@ -26,13 +27,19 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
   - Uses `createPages` to:
     - Create a page for each blog post using `src/templates/blog-post.js`.
     - Special-case the `/now/` slug to use `src/templates/now.js`.
+    - Create a category archive at `/category/<name>/` using
+      `src/templates/category.js` (lowercase names; `/now` and drafts excluded).
+    - Skip `draft: true` posts in production builds. In `gatsby develop`,
+      draft URLs still resolve so you can preview.
+    - Write `public/posts.json` as a JSON index of public posts.
 
 - `src/templates/blog-post.js`
   - Queries a single Markdown post by `slug`.
   - Renders:
-    - Title, date, and category pills.
+    - Title, date, reading time, and category pills (linked to archives).
     - Post HTML (`markdownRemark.html`).
-    - Previous/next navigation.
+    - Previous/next navigation among public posts (`/now` and drafts skipped).
+    - Article JSON-LD via `src/components/seo.js`.
   - Attaches SEO via `src/components/seo.js` using frontmatter `title`,
     `description`, and `keywords`.
 
@@ -41,8 +48,9 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
   - Similar to `blog-post.js` but without previous/next links.
 
 - `src/pages/index.js`
-  - Home page that lists all posts (except `/now/`), showing title, date, and
-    excerpt/description.
+  - Home page that lists public posts (except `/now/` and drafts), showing
+    title, date, reading time, category pills, and excerpt/description.
+  - Category pills at the top link to `/category/<name>/`.
 
 ---
 
@@ -60,6 +68,8 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
     - Twitter card tags (`twitter:title`, `twitter:description`, `twitter:card`,
       `twitter:creator`).
     - Optional `<meta name="keywords">` when a `keywords` array is provided.
+    - RSS autodiscovery (`rel="alternate"` to `/rss.xml`).
+    - Optional JSON-LD (`jsonLd` prop) for article pages.
 
 - `gatsby-config.js`
   - Defines `siteMetadata`:
@@ -80,15 +90,16 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
 ## Scripts
 
 - `scripts/create-post.js`
-  - CLI helper to create a new post:
+  - CLI helper (`npm run new-post -- "Title"`) to create a new post:
     - Generates a slug from the title.
     - Creates `content/blog/<slug>/index.md`.
-    - Writes starter frontmatter:
+    - Writes starter frontmatter including `draft: true`.
 
       ```yaml
       ---
-      title: [TITLE]
+      title: "[TITLE]"
       date: 'YYYY-MM-DD'
+      draft: true
       categories:
           - 
       description: 
@@ -99,6 +110,7 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
 
   - After running the script, you should edit the new file to fill in
     `categories`, `description`, and `keywords` following the style guide.
+    Set `draft: false` (or remove it) when the post should go live.
 
 ---
 
