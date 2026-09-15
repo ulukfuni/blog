@@ -13,6 +13,11 @@ AI agents.
   - Required frontmatter fields: `title`, `date`, `categories`, `description`, `keywords`.
   - Optional `draft: true` keeps a post off public listings until publish.
   - Body is written in Markdown and can include images, code blocks, etc.
+- Standalone pages (same markdown folder, not blog posts):
+  - `content/blog/now/index.md` → `/now/`
+  - `content/blog/work/index.md` → `/work/`
+  - No `date`, `categories`, or `draft`. Excluded from home, RSS, `/posts.json`,
+    category archives, and prev/next.
 - `content/assets`
   - Shared images used by posts and pages.
 
@@ -27,8 +32,10 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
   - Uses `createPages` to:
     - Create a page for each blog post using `src/templates/blog-post.js`.
     - Special-case the `/now/` slug to use `src/templates/now.js`.
+    - Special-case the `/work/` slug to use `src/templates/work.js`.
     - Create a category archive at `/category/<name>/` using
-      `src/templates/category.js` (lowercase names; `/now` and drafts excluded).
+      `src/templates/category.js` (lowercase names; `/now`, `/work`, and drafts
+      excluded).
     - Skip `draft: true` posts in production builds. In `gatsby develop`,
       draft URLs still resolve so you can preview.
     - Write `public/posts.json` as a JSON index of public posts.
@@ -38,17 +45,24 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
   - Renders:
     - Title, date, reading time, and category pills (linked to archives).
     - Post HTML (`markdownRemark.html`).
-    - Previous/next navigation among public posts (`/now` and drafts skipped).
+    - Previous/next navigation among public posts (`/now`, `/work`, and drafts
+      skipped).
     - Article JSON-LD via `src/components/seo.js`.
   - Attaches SEO via `src/components/seo.js` using frontmatter `title`,
     `description`, and `keywords`.
 
 - `src/templates/now.js`
   - Template for the `/now` page.
-  - Similar to `blog-post.js` but without previous/next links.
+  - Similar to `blog-post.js` but without previous/next links, dates, pills, or
+    JSON-LD.
+
+- `src/templates/work.js`
+  - Template for the `/work` page (same standalone-markdown pattern as `/now`).
+  - Same shell as `now.js`: Layout, SEO (`type="website"`), markdown HTML, Bio,
+    home link. No dates, pills, prev/next, or JSON-LD.
 
 - `src/pages/index.js`
-  - Home page that lists public posts (except `/now/` and drafts), showing
+  - Home page that lists public posts (except `/now/`, `/work/`, and drafts), showing
     title, date, reading time, category pills, and excerpt/description.
   - Category pills at the top link to `/category/<name>/`.
 
@@ -58,7 +72,7 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
 
 - `src/components/layout.js`
   - Shared page shell: header (site title link), main content, footer.
-  - Used by index, post templates, and the `/now` page.
+  - Used by index, post templates, and the `/now` and `/work` pages.
 
 - `src/components/seo.js`
   - Wraps `react-helmet` to set:

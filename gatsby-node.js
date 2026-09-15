@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const {
     categorySlug,
     isNowSlug,
+    isWorkSlug,
     isDraft,
     isListedPost,
 } = require(`./src/utils/posts`)
@@ -26,6 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
     const nowTemplate = path.resolve(`./src/templates/now.js`)
+    const workTemplate = path.resolve(`./src/templates/work.js`)
     const categoryTemplate = path.resolve(`./src/templates/category.js`)
 
     const result = await graphql(`
@@ -67,6 +69,17 @@ exports.createPages = async ({ graphql, actions }) => {
             createPage({
                 path: node.fields.slug,
                 component: nowTemplate,
+                context: {
+                    slug: node.fields.slug,
+                },
+            })
+            return
+        }
+
+        if (isWorkSlug(node.fields.slug)) {
+            createPage({
+                path: node.fields.slug,
+                component: workTemplate,
                 context: {
                     slug: node.fields.slug,
                 },

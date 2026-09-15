@@ -6,13 +6,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pills from "../components/pills"
 import { rhythm } from "../utils/typography"
-import { categorySlug, isListedPost } from "../utils/posts"
+import { categorySlug, isListedPost, isStandalonePageSlug } from "../utils/posts"
 
 function BlogIndex({ data, location }) {
     const siteTitle = data.site.siteMetadata.title
     const showDrafts = process.env.NODE_ENV !== `production`
     const posts = data.allMarkdownRemark.edges.filter(({ node }) => {
-        if (node.fields.slug === `/now/`) {
+        if (isStandalonePageSlug(node.fields.slug)) {
             return false
         }
         if (node.frontmatter.draft && !showDrafts) {

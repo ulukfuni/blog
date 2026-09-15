@@ -1,6 +1,8 @@
 require("dotenv").config({
     path: `.env.${process.env.NODE_ENV}`,
 })
+const { isStandalonePageSlug, isDraft } = require(`./src/utils/posts`)
+
 module.exports = {
   siteMetadata: {
     title: `The Life I Live`,
@@ -60,7 +62,8 @@ module.exports = {
               return allMarkdownRemark.edges
                 .filter(
                   ({ node }) =>
-                    node.fields.slug !== `/now/` && !node.frontmatter.draft
+                    !isStandalonePageSlug(node.fields.slug) &&
+                    !isDraft(node.frontmatter)
                 )
                 .map(edge => {
                   return Object.assign({}, edge.node.frontmatter, {

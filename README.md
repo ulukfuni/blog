@@ -13,6 +13,7 @@ the occasional **basketball / devlog**.
 - Blog templates in `src/templates`:
   - `blog-post.js` – regular posts
   - `now.js` – the `/now` page
+  - `work.js` – the `/work` page
 
 ## Local development
 
