@@ -9,7 +9,7 @@ keywords:
     - AI
 ---
 
-I build full-stack AI-native products — the app, the backend, the model calls, the billing, the boring production stuff. This page is the work. The blog posts are how I got there.
+I build full-stack AI-native products — the app, the backend, the model calls, the billing, the boring production stuff. This page is the work.
 
 ### **HoopSim** — live, still building
 
@@ -22,7 +22,7 @@ I came up with this while trying to run a Yahoo league as commissioner from 13 h
 - Polar for billing, Resend for email (product emails from hoopsim.xyz)
 - Draft against rule-based AI managers. Real-time Convex for draft rooms and sim progress
 - In-product LLM is Gemini triaging in-app feedback (can file GitHub issues). League AI narratives are still on the list — not shipped
-- Building it with Cursor / plan mode, which is the thing that actually made this shippable. The sim is variance-based, not a physics engine
+- Building it with Cursor / Pi / GrokBot.
 
 It's playable. I'm still building it.
 
@@ -30,9 +30,9 @@ It's playable. I'm still building it.
 
 An editorial-grade nursing resume builder for live job pages. Bring in one PDF, keep the facts honest, and return a cleaner draft that actually sounds employable. Tailor it to the job description on the page. Export an ATS-safe PDF.
 
-Not a generic resume SaaS. It's a product feature for Nurse Remotely, sitting on the job pages.
+It's a product feature for Nurse Remotely, sitting on the job pages.
 
-- See it on the [Nurse Remotely job board](https://www.nurseremotely.com/jobs)
+- See it on the [Nurse Remotely job board](https://www.nurseremotely.com/jobs) when you are on an actual job posting
 - Stack: React 19 + Vite + Tailwind, Vercel serverless (`api/` + `server/lib/`), Vercel AI SDK, OpenAI + Gemini
 - Zod-validated structured output, unpdf for extract, @react-pdf/renderer for export
 - Upstash Redis for rate limits and quotas, Stripe NRPro billing
@@ -42,10 +42,10 @@ Not a generic resume SaaS. It's a product feature for Nurse Remotely, sitting on
 
 ### **How I build**
 
-- Full stack. UI through billing. The production stuff counts
-- AI in the product, not just as a coding assistant
+- Full stack. UI through billing
+- AI in the product with AI as a builder and orchestrator. I am the pilot. 
 - Structured outputs and schemas. Don't let the model free-wheel facts
 - Agent-friendly backends — Convex, Vercel functions
-- Tests. The boring parts that keep it from falling over
+- Unit tests, E2E tests, integration tests
 
 ### **Last Updated** : September 14, 2026
