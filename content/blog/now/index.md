@@ -13,43 +13,42 @@ keywords:
 - Working as a Senior Frontend Engineer for Novaprime, a mortgage technology startup
 - Working on this blog of [mine](https://www.vietnguyen.site)
 - Working on [HoopSim](https://hoopsim.xyz)
-- Currently looking for remote part-time contracts to supplement income, if you need any Front-end JS/TS work, I am your [person](mailto:vtn1989@gmail.com?subject=Part%20Time%20Work%20Inquiry)!
+- Working on [NurseRemotely](https://nurseremotely.com)
+- Currently looking for remote fractional consulting opportunities, if you need someone to consult on your business from a software/AI perspective, I am your [person](mailto:vtn1989@gmail.com?subject=Part%20Time%20Consulting%20Inquiry)!
 
 ### **Music**
 Listening to 
-- Kpop (never thought this would happen, there's some good stuff here if you dig)
-- JCole - The Fall Off
-- Baby Keem - Ca$ino
+- Bully (Deluxe) - Ye
+- Oh yeah? - Steve Lacy
+- It's Been Awful - Isaiah Rashad
+- Cry Baby - Vince Staples
 - Anything jersey club mix
 
 ### **Games**
-- Still Slowly going thru Borderlands 4. Very slowly.
-- Started Mewgenics. This is great but haven't gotten any OP cats yet
-- Idle Obelisk Miner on mobile, quick thing to check just in and click things and watch things go woosh
+- Slay the Spire 2. Bro told me that mods work on the steam deck so been jumping into those.
+- Idle Obelisk Miner on mobile, quick thing to just check in and click things and watch things go woosh
+- Fire Emblem: Fortune's Weave when the wife is done with it.
 
 ### **Shows**
 - Still watching Bob's Burger as background noise.
-- Rewatch of Sherlock Holmes (the one with Dr. Strange guy)
-- Started and fell off Ted Lasso
+- Kind of fell off TV, I know there are things to watch but the mind wanders too much.
 
 ### **Health**
-Everything is stable now, healthcare system is not real friendly to navigate but things are good for now.
+Got a really good update from testing. MELD score at an 8 from a 14 from 2 years ago. Everything I have done since the diagnosis has paid off.
 
 ### **Outlook**
-- AI is zooming and I am having fun with it. My ideas are good but my execution is getting better with AI's help.
-- The world though, its not looking so good. 
+- AI has begun its takeover of the software industry, for better or worse. I hope to capitalize by building and building.
+- The world and all its bad things, they have not gotten better.
 
 ### **Looking Forward To**
-- Slow times
+- The early dark
 - Building things
-- Launching things
+- New opportunities
 
 ### **Not Looking Forward To**
-- Summer time weather -_-
-- Tax season
-- Hurricane season
-- Lawn maintenance
+- Adulting (been an adult for a while and its quite humbling)
+- Leaving my cats while on vacation
 
 
 
-### **Last Updated** : March 2, 2026
+### **Last Updated** : September 23, 2026
