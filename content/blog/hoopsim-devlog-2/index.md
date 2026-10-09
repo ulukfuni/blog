@@ -18,7 +18,7 @@ keywords:
 
 ![HoopSim hero - orange and black op-art basketball and hoop under the hoopsim.xyz wordmark](hero.jpg)
 
-> TL;DR: HoopSim has a second way to play now. Daily Slate drafts only from players whose NBA teams play on the current, sims that one night, and scores every fantasy team head to head against every other one (28 matchups if there are 8 teams and other math bits). Also added multiplayer, playing with friends is better. Also learning how to project the next season of players with college stats for rookies and previous seasons for current players. Welcome back Hali.
+> TL;DR: [HoopSim](https://app.hoopsim.xyz) has a second way to play now. Daily Slate drafts only from players whose NBA teams play on the current, sims that one night, and scores every fantasy team head to head against every other one (28 matchups if there are 8 teams and other math bits). Also added multiplayer, playing with friends is better. Also learning how to project the next season of players with college stats for rookies and previous seasons for current players. Welcome back Hali.
 
 In the [first devlog](/hoopsim-devlog-1/) I talked about taking the grind out of fantasy basketball. No waiting on box scores, no long season, just strategy. Career mode does that by letting you draft once and sim a whole season in minutes.
 
