@@ -10,6 +10,11 @@ import { categorySlug, isListedPost, isStandalonePageSlug } from "../utils/posts
 
 function BlogIndex({ data, location }) {
     const siteTitle = data.site.siteMetadata.title
+    const imageSrc =
+        data.profile?.childImageSharp?.gatsbyImageData?.images?.fallback?.src
+    const socialImage = imageSrc
+        ? new URL(imageSrc, data.site.siteMetadata.siteUrl).href
+        : undefined
     const showDrafts = process.env.NODE_ENV !== `production`
     const posts = data.allMarkdownRemark.edges.filter(({ node }) => {
         if (isStandalonePageSlug(node.fields.slug)) {
@@ -39,16 +44,17 @@ function BlogIndex({ data, location }) {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title="Home"
-                description="Viet Nguyen's personal blog on software development, life, and stories."
+                title="Viet Nguyen: Software, Life & Stories"
+                description="Viet Nguyen writes about software development, AI projects, fantasy basketball, travel, family, and life, with notes on building HoopSim and Nurse Remotely."
                 keywords={[`viet nguyen`, `blog`, `dev`, `life`, `basketball`]}
+                image={socialImage}
                 pathname={location.pathname}
                 type="website"
             />
             <Bio />
             {categories.length > 0 && (
                 <div style={{ marginBottom: rhythm(1.5) }}>
-                    <Pills items={categories} />
+                    <Pills items={categories} linkableItems={categories} />
                 </div>
             )}
             {posts.map(({ node }) => {
@@ -76,7 +82,10 @@ function BlogIndex({ data, location }) {
                         </small>
                         {node.frontmatter.categories && (
                             <div style={{ marginTop: rhythm(1 / 4) }}>
-                                <Pills items={node.frontmatter.categories} />
+                                <Pills
+                                    items={node.frontmatter.categories}
+                                    linkableItems={categories}
+                                />
                             </div>
                         )}
                         <p
@@ -101,6 +110,17 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
+                siteUrl
+            }
+        }
+        profile: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+            childImageSharp {
+                gatsbyImageData(
+                    width: 1200
+                    height: 630
+                    layout: FIXED
+                    transformOptions: { fit: COVER }
+                )
             }
         }
         allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {

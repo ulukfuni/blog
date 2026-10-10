@@ -1,5 +1,6 @@
 ---
 title: Getting Started With GraphQL
+seoTitle: 'Getting Started with GraphQL and Apollo'
 date: '2019-07-30'
 categories:
     - dev
@@ -12,10 +13,11 @@ keywords:
     - coding
     - apolloserver
     - learning
-description: Trying to learn GraphQL. You probably have seen this buzzword around the Tech Interwebs sooner or later.
+description: "A beginner's look at GraphQL: building a simple Apollo Server schema with types and resolvers, writing queries, and comparing the approach to REST APIs."
+image: ./graph.jpeg
 ---
 
-![graphs but we are dealing with code though](graph.jpeg)
+![Chart titled Weekly Plan contrasting Not Sucking with Sucking for the past and future](graph.jpeg)
 
 So if you haven't heard, GraphQL is the newest kid on the block (I might just be late, it's the newest kid on MY block anyway).
 

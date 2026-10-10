@@ -12,7 +12,7 @@ function NotFoundPage({ data, location }) {
             <SEO
                 title="404: Not Found"
                 description="This page does not exist."
-                pathname={location.pathname}
+                meta={[{ name: `robots`, content: `noindex` }]}
             />
             <h1>Not Found</h1>
             <p>

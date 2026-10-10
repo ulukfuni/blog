@@ -10,9 +10,10 @@ keywords:
     - petowner
     - adopt-dont-shop
     - rescue-cats
-description: An introduction to my cats and how I became a pet owner.
+description: The story of how I became a pet owner, from rescuing a stray little black cat named Hades to bringing home a playful white Scottish Fold kitten named Loki.
+image: ./hades-n-loki.jpg
 ---
-![Hades And Loki](hades-n-loki.jpg)
+![Hades, the black cat, and Loki, the white kitten](hades-n-loki.jpg)
 
 > TL;DR Cat pics and the internet have to go together so incoming cat picture post with sappy story: My journey to owning two furry animals was a very rewarding albeit stress-inducing adventure. The decision to even be a pet owner was like a knee-jerk choice but it has really humbled me and furthered my growth as a person. Pets can really enrich your life and I would super recommend one to anyone.
 
@@ -32,13 +33,13 @@ On the storming night of the eve of Friday the 13th with a full moon looming, we
 
 Let me tell you, you never forget the first time you smell cat pee especially the smell of it when it belongs to your first cat. I picked up the cat (first time handling a cat), cleaned up the pee and with the help of my wife and her two youngest siblings (Thank you Emily and Lilian), we all gave the cat a sink bath (first time for everyone, cat included). Dirt, grime, mud and probably a few (disgusting) bugs came off. The cat was clean. We got a cage for her and fresh food and water, and a warm water bottle wrapped in a towel that would act as a mother cat's warmth. She was not going to be the loner cat at feeding time anymore. That day she became our Hades.
 
-![Baby Hades](baby-hades.JPG)
+![Hades as a kitten](baby-hades.JPG)
 
 Fast forward a few years and a slow melting of Hades's first layer of her icy exterior, and we came to the conclusion that maybe another one of her species being around could lead to another layer slowly dissipating. By this time, I learned of other cat breeds, stared intently at all the cat pics the internet had to offer, and ooohhhhh'd and ahhhhhh'd at all the disgustingly cute kitten pictures on IG. We decided we were ready for another cat without Hades's consent.
 
 We got Loki through a breeder (no dramatic story here, it was a very cut and dry hand off) and we were pleasantly surprised that a cat can be this warm and loving towards humans. Big smiles as we came home with him. Finally, Loki might be the last piece of the puzzle to unlock Hades's icy heart.
 
-![Baby Loki](baby-loki.jpg)
+![Loki as a kitten](baby-loki.jpg)
 
 Nope. Big time NOPE.
 

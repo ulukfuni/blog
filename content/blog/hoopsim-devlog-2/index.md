@@ -1,10 +1,12 @@
 ---
 title: 'HoopSim Devlog #2: Daily Slate, Multiplayer, data wrangling'
+seoTitle: 'HoopSim #2: Daily Slate & Multiplayer'
 date: '2026-10-08'
 categories:
     - dev
     - sports
-description: Adding a Daily Slate mode to HoopSim. Multiplayer lands. Looking at mucho data. Thank you Pi/OMP/Cursor
+description: This HoopSim update covers Daily Slate fantasy basketball, multiplayer, schedule data, player projections, and the short-form video pipeline for recorded games.
+image: ./hero.jpg
 keywords:
     - developer
     - tech
@@ -21,6 +23,7 @@ keywords:
 > TL;DR: [HoopSim](https://app.hoopsim.xyz) has a second way to play now. Daily Slate drafts only from players whose NBA teams play on the current, sims that one night, and scores every fantasy team head to head against every other one (28 matchups if there are 8 teams and other math bits). Also added multiplayer, playing with friends is better. Also learning how to project the next season of players with college stats for rookies and previous seasons for current players. Welcome back Hali.
 
 In the [first devlog](/hoopsim-devlog-1/) I talked about taking the grind out of fantasy basketball. No waiting on box scores, no long season, just strategy. Career mode does that by letting you draft once and sim a whole season in minutes.
+For the current features and stack, see my [HoopSim project page](/work/).
 
 I wanted to remix the standard fantasy formula a bit. 
 

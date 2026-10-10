@@ -13,7 +13,7 @@ function WorkTemplate({ data, location }) {
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title={post.frontmatter.title}
+                title={post.frontmatter.seoTitle || post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
                 keywords={post.frontmatter.keywords || []}
                 pathname={location.pathname}
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
             html
             frontmatter {
                 title
+                seoTitle
                 description
                 keywords
             }

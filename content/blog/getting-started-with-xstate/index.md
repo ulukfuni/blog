@@ -1,5 +1,6 @@
 ---
 title: Getting Started with XState
+seoTitle: "XState in React: A Beginner's Guide"
 date: '2019-10-09'
 categories:
     - dev
@@ -12,7 +13,8 @@ keywords:
     - javascript
     - state machine
     - xstate
-description: My experience using XState state machines in React.
+description: "A beginner's guide to XState state machines in React: defining states and transitions, assigning context, and invoking services to call the Rick and Morty API."
+image: ./search.png
 ---
 
 > TL;DR State machines are an interesting topic that I have not been properly introduced to even though I probably, unintentionally, use it in alot of my programming tasks/projects. I am still a bit inexperienced with modeling my UI to a state machine but I hope [these](https://css-tricks.com/using-react-and-xstate-to-build-a-sign-in-form/) [links](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/) [that](https://xstate.js.org/docs/) [I](https://xstate.js.org/viz/) used will help you in using state machines in JS, particularly with the xstate library and react.
@@ -31,9 +33,9 @@ I went through the [tutorial](https://css-tricks.com/using-react-and-xstate-to-b
 
 So I decided to just make a simple search input and with a submit button and I will use the Rick and Morty [API](https://rickandmortyapi.com/) to just search for a name and bring back a character from the popular Adult Swim TV show, Rick and Morty.
 
-![tiny search, but no autocomplete](search.png)
+![Search form with a Character Name input, a Search button, and the XState state label set to ready](search.png)
 
-![all the ricks](rick.png)
+![Search results listing Rick and Morty characters including Rick Sanchez and Black Rick with species, status, and origin](rick.png)
 
 So XState is a configuration based library in that you will pass a configuration object into your 'machine' and it will monitor your state based on transistion actions that you pass into.
 

@@ -1,5 +1,6 @@
 ---
 title: My Career Thus Far
+seoTitle: 'My Career: Engineering to Software'
 date: '2019-03-20'
 categories:
     - career
@@ -12,7 +13,8 @@ keywords:
     - front-end
     - electrical-engineering
     - starups
-description: An introspective look back into my career thus far.
+description: A look back at a career path from an electrical engineering degree into software development jobs at several companies and startups, with resume shotgunning.
+image: ../../assets/profile-pic.jpg
 ---
 
 I have often thought about the 'what if' about multiple things in my life but my career seems to be one that I think about the most. For those who don't know, I graduated with a degree in Electrical Engineering (took me about 6 years, I know all about slacking) but I do software for my day job. Before graduating at all and maybe even before entering college, I did not have the faintest idea of what I wanted to do in regards to my career or finding a way to earn money to survive. I was quite stupid back then. ~~I had a ton of interest in making video games but did not do any research into that career field.~~

@@ -9,13 +9,14 @@ keywords:
     - music
     - hip-hop
     - rnb
-description: Music I have been listening to recently
+description: Albums on repeat in April 2019, including Anderson .Paak, Little Simz, PNTHN, Anonymuz, Ta-ku, and Alina Baraz, plus a few loose singles worth checking out.
+image: ./ventura.jpg
 ---
 *I will list the albums I am listening to and then dive into which songs stand out to me.*
 
 ### Anderson .Paak - Ventura
 
-![pic](ventura.jpg)
+![Ventura album cover by Anderson .Paak](ventura.jpg)
 [Listen](https://www.youtube.com/watch?v=hEdBe04dwms)
 
 Standout Tracks - `Come Home`, `Winner's Circle`, `Jet Black`, `Twilight`
@@ -31,7 +32,7 @@ As I was looking through the producing credits, I saw that `Winner's Circle` was
 
 ### Little Simz - GREY Area
 
-![pic](greyarea.jpg)
+![GREY Area album cover by Little Simz](greyarea.jpg)
 [Listen](https://www.youtube.com/watch?v=iSSKDIcpdSE)
 
 Standout Tracks - `Selfish`, `Venom`, `Pressure`
@@ -44,7 +45,7 @@ I think `Venom` is a clearer introduction to who Little Simz is as an artist. Sh
 
 ### PNTHN - Potluck
 
-![pic](potluck.jpg)
+![Potluck album cover by PNTHN](potluck.jpg)
 [Listen](https://www.youtube.com/watch?v=pfmGxpNwtMs)
 
 Standout Tracks - `CHUMBUCKET`, `CHROME`
@@ -55,7 +56,7 @@ Pronounced 'pantheon', I stumbled upon this 8 man group and immediately took to 
 
 ### Anonymuz - There is No Threat
 
-![pic](tint.jpg)
+![There Is No Threat album cover by Anonymuz](tint.jpg)
 [Listen](https://www.youtube.com/watch?v=Uo4B4cZlzDo)
 
 Standout Tracks - `Sun Down`, `Feel So Good Pt2`, `Smoke`, `Rxdical Forever`, `No Threat`
@@ -70,14 +71,14 @@ This EP is one where you can listen from front to back and will not find a bad s
 
 ### Ta-ku - 25 Nights for Nujabes
 
-![pic](taku.jpg)
+![25 Nights for Nujabes album cover by Ta-ku](taku.jpg)
 [Listen](https://www.youtube.com/watch?v=5Fp1viiRJnw&t=588s)
 
 Producer Ta-ku does some good work and is a master of atmospheric and moody backdrops for artist to sing/rap to. This compilation/tribute to Nujabes has got me through many a day at work or late at night when I am doing some writing or coding.
 
 ### Alina Baraz - Urban Flora
 
-![pic](urbanflora.jpeg)
+![Urban Flora album cover by Alina Baraz](urbanflora.jpeg)
 [Listen](https://www.youtube.com/watch?v=CCYjEU4pglg)
 
 Standout Tracks - `Show Me`, `Pretty Thoughts`

@@ -14,8 +14,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     createTypes(`
         type MarkdownRemarkFrontmatter {
             title: String
+            seoTitle: String
             date: Date @dateformat
             description: String
+            image: File @fileByRelativePath
             categories: [String]
             keywords: [String]
             draft: Boolean
@@ -63,6 +65,18 @@ exports.createPages = async ({ graphql, actions }) => {
     const posts = result.data.allMarkdownRemark.edges
     const includeDraftPages = process.env.NODE_ENV !== `production`
     const sequenced = posts.filter(({ node }) => isListedPost(node))
+    const categoryCounts = new Map()
+    sequenced.forEach(({ node }) => {
+        ;(node.frontmatter.categories || []).forEach(name => {
+            const key = categorySlug(name)
+            if (key) {
+                categoryCounts.set(key, (categoryCounts.get(key) || 0) + 1)
+            }
+        })
+    })
+    const linkableCategories = Array.from(categoryCounts.entries())
+        .filter(([, count]) => count >= 2)
+        .map(([category]) => category)
 
     posts.forEach(({ node }) => {
         if (isNowSlug(node.fields.slug)) {
@@ -107,25 +121,16 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: node.fields.slug,
                 previous,
                 next,
+                linkableCategories,
             },
         })
     })
 
-    const categories = new Set()
-    sequenced.forEach(({ node }) => {
-        ;(node.frontmatter.categories || []).forEach(name => {
-            const key = categorySlug(name)
-            if (key) {
-                categories.add(key)
-            }
-        })
-    })
-
-    categories.forEach(category => {
+    linkableCategories.forEach(category => {
         createPage({
             path: `/category/${category}/`,
             component: categoryTemplate,
-            context: { category },
+            context: { category, linkableCategories },
         })
     })
 

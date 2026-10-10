@@ -6,30 +6,44 @@ This guide was derived from existing posts in `content/blog/`. Use it to keep ne
 
 ## Frontmatter
 
-- **Required fields:** `title`, `date`, `categories`, `description`, `keywords`
-- **Date:** Use quoted ISO date: `date: 'YYYY-MM-DD'`
+- **Required fields:** `title`, `date`, `categories`, `description`, `keywords`, `image`
+- **Date:** Use quoted ISO date: `date: 'YYYY-MM-DD'`.
 - **Drafts:** New posts from `npm run new-post` include `draft: true`. Drafts
   are omitted from the home page, category pages, RSS, and `/posts.json`. In
   local `npm run develop`, you can still open the post URL to preview. Set
   `draft: false` (or delete the field) to publish.
-- **Categories:** YAML list, 2-space indent. Use 1–5 items; mix of topic and tone (e.g. `dev`, `life`, `story`, `JavaScript`). Casing is inconsistent in the archive (both `dev` and `Dev` appear); prefer **lowercase** for new posts. Each category is a public page at `/category/<name>/`.
-- **Keywords:** YAML list, 2-space indent. SEO- and discovery-oriented; can overlap with categories.
-- **Description:** One line; used for SEO and previews. No period at end.
+- **Categories:** YAML list, 2-space indent. Use 1–5 lowercase items. A category
+  archive is generated only after at least two published posts use it; other
+  category pills remain plain text.
+- **Keywords:** YAML list, 2-space indent. These are kept for post metadata and
+  `/posts.json`; they can overlap with categories.
+- **Description:** Write one accurate, unique sentence around 150–160
+  characters. It is used for search and social previews. Quote the value when
+  it contains `: `.
+- **Image:** Use a local path relative to `index.md`, preferably the first
+  relevant image in the post. The new-post script defaults to the author photo
+  when a post has no subject-specific image. Gatsby creates the social image and
+  BlogPosting image from this field.
+- **SEO title:** Optional `seoTitle` adds a useful topic to a short or generic
+  title, or shortens a long one. Keep the rendered title around 50–60 characters
+  when natural; the visible post title does not change.
 
 Example:
 
 ```yaml
 ---
-title: Your Post Title Here
-date: '2026-03-02'
+title: 'HoopSim Devlog #2: Daily Slate, Multiplayer, data wrangling'
+seoTitle: 'HoopSim #2: Daily Slate & Multiplayer'
+date: '2026-10-08'
 draft: false
 categories:
     - dev
-    - devlog
-description: Short summary for search and social previews
+    - sports
+description: "This HoopSim update covers Daily Slate fantasy basketball, multiplayer, schedule data, player projections, and the short-form video pipeline for recorded games."
+image: ./hero.jpg
 keywords:
-    - keyword-one
-    - keyword-two
+    - hoopsim
+    - fantasy basketball
 ---
 ```
 
@@ -56,7 +70,9 @@ keywords:
 
 ## Formatting
 
-- **Images:** Use at the top of the post or within relevant sections. Always use descriptive alt text (e.g. `![Dwyane Wade](dwade.png)` not `![image](dwade.png)`).
+- **Images:** Use them at the top of the post or within relevant sections. Write
+  alt text that describes the image in context. Use an empty alt value only for
+  decorative images; avoid generic text such as `pic`, `image`, or `food`.
 - **Links:** Inline markdown. Prefer “here” or the resource name as link text when it reads naturally (e.g. “You can take a look at the rest of the code [here](url).”).
 - **Code:** Fenced blocks with language tag (e.g. ` ```js `, ` ```bash `). Short comments in code are fine.
 - **Asides:** Strikethrough for playful asides (e.g. `~~I had a ton of interest in making video games~~`). Blockquotes for longer asides (e.g. “> Aside: …”).

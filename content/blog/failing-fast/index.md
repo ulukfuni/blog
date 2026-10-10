@@ -1,5 +1,6 @@
 ---
 title: Failing Fast
+seoTitle: 'Failing Fast: Programming and Life'
 date: '2019-06-10'
 categories:
     - life
@@ -8,10 +9,11 @@ keywords:
     - failing
     - failure
     - introspection
-description: A concept in programming really make me think about life.
+description: Reflections on the programming idea of failing fast and why real life offers no reset button or redo, only hard lessons learned from the choices we make.
+image: ./lost.jpeg
 ---
 
-![lost guy, what a failure](lost.jpeg)
+![Person standing in a concrete stairwell](lost.jpeg)
 
 So in programming, there is a concept called failing fast. It usually deals with testing the code and figuring out what doesn't work first until you get to your desired result. For instance, a login form. In order to check if your password has the proper protections on it (special chars, uppercase/lowercase chars, numbers, etc.), you would try all the sequences of password without those protections first and then keep inputting it with more and more protections until the password finally passes through and you have logged in.
 

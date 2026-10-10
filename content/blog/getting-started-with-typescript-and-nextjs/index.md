@@ -11,7 +11,8 @@ keywords:
     - tech
     - javascript
     - typescript
-description: My experience with trying to integrate TypeScript into a react application.
+description: "My notes on adding TypeScript to a React and Next.js app: variable types, interfaces, tuples, async functions, and the configuration files that make it work."
+image: ../../assets/profile-pic.jpg
 ---
 
 > TL;DR I am an amateur when it comes to type systems as I came from a JavaScript and PHP background, so this new must-type-everything-before-running is tedious and new to me. Learned a few things and made a small guide to Typescript as it pertains to writing React code.

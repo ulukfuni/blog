@@ -9,10 +9,11 @@ keywords:
     - japan
     - travel
     - tips
-description: All the information I have in my brain about going to Japan. If you even have an inkling of desire to go to Japan, this will be helpful to you.
+description: A practical Japan travel guide from an American's perspective, covering what to do after landing, lodging, transit cards, cash, food, and local quirks.
+image: ./map.png
 ---
 
-![Map Traveling from Florida to Tokyo](map.png)
+![Route map from Florida to Tokyo, Japan](map.png)
 
 ## First Things to Do After Landing in Japan
 
@@ -60,7 +61,7 @@ It is pretty pricey (around 250USD at the time of this writing for the 7 day pas
 
 ## Money
 
-![City](city.jpg)
+![Night view of city buildings and street lights through a rain-speckled window](city.jpg)
 
 Japan is a country where cash is king.
 
@@ -116,23 +117,23 @@ You may want to look into messaging apps that can use WIFI to message if you do 
 
 ## Food
 
-![Food](food1.jpg)
+![Tonkatsu cutlet with shredded cabbage and rice on a tray](food1.jpg)
 
 My favorite topic!
 
-![Food](food2.jpg)
+![Tsukemen noodles with a separate bowl of dipping broth](food2.jpg)
 
 If you did not come to Japan to eat, you are totally missing out. There is a large variety of food with a large range of prices. It is very possible to go the cheap route and still enjoy many of the cultural dishes in Japan.
 
-![Food](food3.jpg)
+![Japanese set meal with rice, glazed meat, and side dishes](food3.jpg)
 
 Japan has many konbini (convenience stores) that offer super cheap snacks and actual food. I really enjoy the packaged onigiri (rice balls, around 2USD) and they even have lunch sets that range anywhere from 4-10 USD.
 
-![Food](food4.jpg)
+![Ramen meal with rice, miso soup, and fried chicken on a tray](food4.jpg)
 
 There are also a lot of ramen shops, gyudon (meat bowl) shops, sushi places, and other places that you can get a meal for under 10 USD. There is no need to break the bank to eat good in Japan.
 
-![Ichiran](ramen.jpg)
+![A bowl of Ichiran ramen](ramen.jpg)
 
 My favorite ramen spot has to be Ichiran. It is a ramen chain all around Japan and it is the ramen spot that sports the "concentrate on your food" vibe. Well it literally makes you concentrate on your food.
 
@@ -146,13 +147,13 @@ Since its super famous, its probably going to be super crowded, so if you want t
 
 I have to give a shout out to two items that I went into glutton mode for over in Japan: ice cream and vending machine coffees. The ice cream over there is amazing. Its soft and creamy and not super sweet. Also, its cheap and they are everywhere. I think all those adjectives that describe ice cream in japan, can also apply to vending machine coffee. Its only around 1USD, its not too sweet, and they have heated cans inside the vending machine. Super fast hot coffee on the go that's cheap. Revolutionary.
 
-![Food](food5.jpg)
+![Tempura rice bowl and soba noodle soup served on a tray](food5.jpg)
 
 All in all, try everything, you won't regret it.
 
 ## Shrines
 
-![Shrine](shrine.jpg)
+![Large wooden entrance gate at a Japanese shrine with a visitor in the courtyard](shrine.jpg)
 
 Shrines are plentiful all throughout Japan. They are a big change of pace from the big city skyscrapers and subways and city streets. The shrines are still going to be crowded probably but if you go to the lesser known ones, it is a serene and calming experience.
 
@@ -160,7 +161,7 @@ So at most shrines, you can make a small prayer for good fortune at the temple, 
 
 ## Japan Quirks
 
-![Park](park.jpg)
+![Japanese garden with a pine tree supported by ropes](park.jpg)
 
 From an American going to Japan.
 

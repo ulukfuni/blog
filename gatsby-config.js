@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `The Life I Live`,
     author: `Viet Nguyen`,
-    description: `Viet Nguyen's personal blog about software development, life, stories, and more`,
+    description: `Viet Nguyen writes about software development, AI projects, fantasy basketball, travel, family, and everyday life, with notes from projects he is building.`,
     siteUrl: `https://www.vietnguyen.site`,
     social: {
       twitter: `ulukfuni`,
@@ -36,6 +36,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              withWebp: true,
             },
           },
           {

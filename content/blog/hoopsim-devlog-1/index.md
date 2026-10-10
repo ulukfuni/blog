@@ -1,11 +1,13 @@
 ---
 title: HoopSim Devlog #1
+seoTitle: 'HoopSim #1: Fantasy Basketball Simulator'
 date: '2026-03-02'
 categories:
     - dev
     - sports
     - entrepreneur
-description: The origin of HoopSim—a simulated fantasy basketball platform—and the stack I'm using to build it.
+description: HoopSim began as an answer to managing fantasy basketball across time zones. This devlog covers its origin, AI-assisted research, simulation design, and stack.
+image: ./hero.jpg
 keywords:
     - developer
     - tech
@@ -37,6 +39,7 @@ This is something I came up with while trying my best to manage as commissioner 
 That led me to the idea of replacing all the pain points with algorithms/simulations. Basically taking the reality out of the fantasy. With simulations, we can turn injuries in the simulation off. With algorithms, we can simulate entire weeks, even seasons if we wanted to. No more grinding. No more waiting for boxscores. Just strategy uninterrupted and streamlined.
 
 This idea stuck in my head and traveled with me to S. Korea and Japan and then back to the States. I told myself if I can build a quick version of it with AI, I would pursue this until its something that I am proud of. You can check it out at [hoopsim.xyz](https://hoopsim.xyz).
+I keep a current overview of the features and technology on my [HoopSim project page](/work/).
 
 ## Tech stack
 

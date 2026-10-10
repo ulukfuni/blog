@@ -24,6 +24,7 @@ draft: true
 categories:
     - 
 description: 
+image: ../../assets/profile-pic.jpg
 keywords:
     - 
 ---

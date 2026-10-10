@@ -9,6 +9,7 @@ import { categorySlug, isListedPost } from "../utils/posts"
 
 function CategoryTemplate({ data, pageContext, location }) {
     const siteTitle = data.site.siteMetadata.title
+    const siteAuthor = data.site.siteMetadata.author
     const { category } = pageContext
     const posts = data.allMarkdownRemark.edges.filter(({ node }) => {
         if (!isListedPost(node)) {
@@ -18,12 +19,25 @@ function CategoryTemplate({ data, pageContext, location }) {
             name => categorySlug(name) === category
         )
     })
+    const categoryTitle = `${siteAuthor}'s ${category} article archive`
+    const descriptionPrefix = `${siteAuthor} writes about ${category}. `
+    const firstPost = posts[0].node
+    const postSummary = firstPost.frontmatter.description || firstPost.excerpt
+    const summaryLength = 160 - descriptionPrefix.length
+    const summary =
+        postSummary.length > summaryLength
+            ? `${postSummary
+                  .slice(0, summaryLength - 1)
+                  .replace(/\s+\S*$/, "")
+                  .trimEnd()}…`
+            : postSummary
+    const description = `${descriptionPrefix}${summary}`
 
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title={`${category} posts`}
-                description={`Posts about ${category} on ${siteTitle}.`}
+                title={categoryTitle}
+                description={description}
                 keywords={[category]}
                 pathname={location.pathname}
                 type="website"
@@ -63,7 +77,10 @@ function CategoryTemplate({ data, pageContext, location }) {
                         </small>
                         {node.frontmatter.categories && (
                             <div style={{ marginTop: rhythm(1 / 4) }}>
-                                <Pills items={node.frontmatter.categories} />
+                                <Pills
+                                    items={node.frontmatter.categories}
+                                    linkableItems={pageContext.linkableCategories}
+                                />
                             </div>
                         )}
                         <p
@@ -88,6 +105,7 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
+                author
             }
         }
         allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {

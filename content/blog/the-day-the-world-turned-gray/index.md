@@ -1,11 +1,13 @@
 ---
 title: The Day The World Turned Grey
+seoTitle: 'The Day The World Turned Grey: Grief'
 date: '2025-12-06'
 categories:
     - update
     - story
     - life
-description: A story that must be told
+description: Remembering the December day in 2023 that the author's cousin Trang Van passed away, the drive to the family house, and the grief still felt two years later.
+image: ./grey-sky.jpeg
 keywords:
     - writing
     - update

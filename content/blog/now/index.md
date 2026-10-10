@@ -1,6 +1,7 @@
 ---
 title: What I'm Doing Now
-description: A living now page sharing what I'm currently working on, playing, and thinking about.
+seoTitle: 'Viet Nguyen: Current Projects and Life'
+description: A current snapshot of Viet Nguyen's software projects and consulting work, plus the music, games, family, and health updates occupying his time right now.
 keywords:
     - now
     - update

@@ -21,18 +21,19 @@ const style = {
     },
 }
 
-const Pills = props => (
+const Pills = ({ items, linkableItems }) => (
     <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-        {props.items.filter(Boolean).map((item, i) => {
+        {items.filter(Boolean).map((item, i) => {
             const slug = categorySlug(item)
-            return (
-                <Link
-                    key={`${slug}-${i}`}
-                    to={`/category/${slug}/`}
-                    style={style.pill}
-                >
+            const key = `${slug}-${i}`
+            return linkableItems.includes(slug) ? (
+                <Link key={key} to={`/category/${slug}/`} style={style.pill}>
                     {item}
                 </Link>
+            ) : (
+                <span key={key} style={style.pill}>
+                    {item}
+                </span>
             )
         })}
     </div>
@@ -40,10 +41,13 @@ const Pills = props => (
 
 Pills.defaultProps = {
     items: [],
+    linkableItems: [],
 }
 
 Pills.propTypes = {
     items: PropTypes.arrayOf(PropTypes.string),
+    linkableItems: PropTypes.arrayOf(PropTypes.string),
 }
+
 
 export default Pills

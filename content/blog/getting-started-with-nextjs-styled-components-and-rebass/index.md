@@ -17,7 +17,9 @@ keywords:
     - styled components
     - rebass
     - web development
-description: A look into the inner workings of a boilerplate that was made with NextJS, Styled Components and Rebass.
+description: A walkthrough of a Next.js starter boilerplate that combines Styled Components for CSS-in-JS and Rebass for UI components, and a look at server-side rendering.
+seoTitle: Next.js, Styled Components & Rebass
+image: ../../assets/profile-pic.jpg
 ---
 > TL;DR I made a starter pack for someone who wants to get started with a server rendered [React](https://nextjs.org/) framework with the power of [Styled Components](https://www.styled-components.com/) and a standard component library in [Rebass](https://rebassjs.org/) to work with. You can fork or download this boilerplate [here](https://github.com/ulukfuni/nextjs-boilerplate) and jump right in and start coding.
 

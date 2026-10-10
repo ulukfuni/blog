@@ -10,16 +10,22 @@ import { rhythm, scale } from "../utils/typography"
 function BlogPostTemplate({ data, pageContext, location }) {
     const post = data.markdownRemark
     const siteTitle = data.site.siteMetadata.title
-    const { previous, next } = pageContext
+    const { previous, next, linkableCategories } = pageContext
     const url = `${data.site.siteMetadata.siteUrl}${location.pathname}`
+    const imageSrc =
+        post.frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src
+    const socialImage = imageSrc
+        ? new URL(imageSrc, data.site.siteMetadata.siteUrl).href
+        : undefined
 
     return (
         <Layout location={location} title={siteTitle}>
             <SEO
-                title={post.frontmatter.title}
+                title={post.frontmatter.seoTitle || post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
                 keywords={post.frontmatter.keywords || []}
                 pathname={location.pathname}
+                image={socialImage}
                 type="article"
                 jsonLd={{
                     "@context": "https://schema.org",
@@ -28,15 +34,17 @@ function BlogPostTemplate({ data, pageContext, location }) {
                     description:
                         post.frontmatter.description || post.excerpt,
                     datePublished: post.frontmatter.isoDate,
-                    dateModified: post.frontmatter.isoDate,
                     url,
+                    image: socialImage,
                     author: {
                         "@type": "Person",
                         name: data.site.siteMetadata.author,
+                        url: data.site.siteMetadata.siteUrl,
                     },
                     publisher: {
                         "@type": "Person",
                         name: data.site.siteMetadata.author,
+                        url: data.site.siteMetadata.siteUrl,
                     },
                     mainEntityOfPage: url,
                     keywords: (post.frontmatter.keywords || []).join(`, `),
@@ -57,7 +65,10 @@ function BlogPostTemplate({ data, pageContext, location }) {
                     {post.frontmatter.draft ? ` · Draft` : null}
                 </p>
                 {post.frontmatter.categories && (
-                    <Pills items={post.frontmatter.categories} />
+                    <Pills
+                        items={post.frontmatter.categories}
+                        linkableItems={linkableCategories}
+                    />
                 )}
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -115,11 +126,22 @@ export const pageQuery = graphql`
             frontmatter {
                 categories
                 title
+                seoTitle
                 date(formatString: "MMMM DD, YYYY")
                 isoDate: date
                 description
                 keywords
                 draft
+                image {
+                    childImageSharp {
+                        gatsbyImageData(
+                            width: 1200
+                            height: 630
+                            layout: FIXED
+                            transformOptions: { fit: COVER }
+                        )
+                    }
+                }
             }
         }
     }

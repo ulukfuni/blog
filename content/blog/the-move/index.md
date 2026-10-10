@@ -1,5 +1,6 @@
 ---
 title: The Move
+seoTitle: 'Moving from Orlando to Charlotte in 2020'
 date: '2020-08-31'
 categories:
     - life
@@ -8,7 +9,8 @@ keywords:
     - new
     - fresh
     - change
-description: Moving and other thoughts.
+description: "Relocating from Orlando to Charlotte during the pandemic: a remote job interview, agonizing decisions, and a stressful eight-hour drive with a stressed out cat."
+image: ./hades-sit.jpg
 ---
 
 ![Tina was in the back just chilling](hades-sit.jpg)

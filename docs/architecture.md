@@ -33,23 +33,29 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
     - Create a page for each blog post using `src/templates/blog-post.js`.
     - Special-case the `/now/` slug to use `src/templates/now.js`.
     - Special-case the `/work/` slug to use `src/templates/work.js`.
-    - Create a category archive at `/category/<name>/` using
-      `src/templates/category.js` (lowercase names; `/now`, `/work`, and drafts
-      excluded).
+    - Create category archives at `/category/<name>/` only when at least two
+      published posts share the category. Pills for one-post categories remain
+      plain text instead of linking to thin archives.
     - Skip `draft: true` posts in production builds. In `gatsby develop`,
       draft URLs still resolve so you can preview.
     - Write `public/posts.json` as a JSON index of public posts.
 
+  - Uses `@fileByRelativePath` for `frontmatter.image` and supports an optional
+    `seoTitle` field.
 - `src/templates/blog-post.js`
   - Queries a single Markdown post by `slug`.
   - Renders:
-    - Title, date, reading time, and category pills (linked to archives).
+    - Title, date, reading time, and category pills. Pills link only to category
+      archives that are generated for at least two published posts.
     - Post HTML (`markdownRemark.html`).
     - Previous/next navigation among public posts (`/now`, `/work`, and drafts
       skipped).
-    - Article JSON-LD via `src/components/seo.js`.
-  - Attaches SEO via `src/components/seo.js` using frontmatter `title`,
-    `description`, and `keywords`.
+    - `BlogPosting` JSON-LD with the featured image, publication date, and
+      author/publisher Person data. `dateModified` is omitted because content
+      frontmatter does not track a modified date.
+  - Uses `seoTitle` when present; otherwise uses the frontmatter `title`. The
+    `image` field is a local File relation used to generate the social card and
+    structured-data image.
 
 - `src/templates/now.js`
   - Template for the `/now` page.
@@ -64,7 +70,8 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
 - `src/pages/index.js`
   - Home page that lists public posts (except `/now/`, `/work/`, and drafts), showing
     title, date, reading time, category pills, and excerpt/description.
-  - Category pills at the top link to `/category/<name>/`.
+  - Category pills link only to `/category/<name>/` archives with at least two
+    published posts.
 
 ---
 
@@ -78,20 +85,20 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
   - Wraps `react-helmet` to set:
     - `<title>` with a `titleTemplate` based on `siteMetadata.title`.
     - `<meta name="description">` (from prop or site default).
-    - Open Graph (`og:title`, `og:description`, `og:type`).
-    - Twitter card tags (`twitter:title`, `twitter:description`, `twitter:card`,
-      `twitter:creator`).
+    - A self-referencing canonical URL from `pathname`.
+    - Open Graph tags, including `og:image` when an image is provided.
+    - Twitter card tags, including `twitter:image` when an image is provided.
     - Optional `<meta name="keywords">` when a `keywords` array is provided.
     - RSS autodiscovery (`rel="alternate"` to `/rss.xml`).
     - Optional JSON-LD (`jsonLd` prop) for article pages.
-
 - `gatsby-config.js`
   - Defines `siteMetadata`:
     - `title`, `author`, `description`, `siteUrl`, `social`.
   - Registers core plugins:
     - `gatsby-source-filesystem` for `content/blog` and `content/assets`.
     - `gatsby-transformer-remark` (with remark plugins for images, iframes,
-      PrismJS syntax highlighting, etc.).
+      PrismJS syntax highlighting, etc.); `gatsby-remark-images` also emits
+      WebP image sources.
     - `gatsby-plugin-image`, `gatsby-plugin-sharp`, `gatsby-transformer-sharp`.
     - `gatsby-plugin-feed` for RSS.
     - `gatsby-plugin-offline`, `gatsby-plugin-react-helmet`,
@@ -115,16 +122,19 @@ Frontmatter and writing conventions are defined in `docs/blog-style-guide.md`.
       date: 'YYYY-MM-DD'
       draft: true
       categories:
-          - 
-      description: 
+          -
+      description:
+      image: ../../assets/profile-pic.jpg
       keywords:
-          - 
+          -
       ---
       ```
 
-  - After running the script, you should edit the new file to fill in
-    `categories`, `description`, and `keywords` following the style guide.
-    Set `draft: false` (or remove it) when the post should go live.
+  - After running the script, edit the new file to fill in `categories`, a
+    150–160 character `description`, `image`, and `keywords`. Replace the profile
+    image path with a relevant local image when the post has one. Add `seoTitle`
+    to clarify a short or generic title or to shorten a long one. Set
+    `draft: false` (or remove it) when the post should go live.
 
 ---
 

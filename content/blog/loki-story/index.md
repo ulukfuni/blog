@@ -10,7 +10,8 @@ keywords:
     - petowner
     - adopt-dont-shop
     - rescue-cats
-description: My experience with integrating my new (at the time) cat, Loki, into our family.
+description: Bringing a new kitten named Loki into the house and the long, messy process of getting him to coexist with the resident cat Hades, including one scary vet stay.
+image: ./loki-ball.jpeg
 ---
 
 ![loki sitting on couch](loki-ball.jpeg)
@@ -25,7 +26,7 @@ So we finally arrived home and unleashed the playful cat that we have got. Insta
 
 We finally came to the idea of walling off the kitchen and keeping Loki there in order to give me a little more space. To give you an idea of what the kitchen is like, its like an L shape and the entrance and exit are the same with no door. We have cabinets that face each other and the fridge sits at the right angle of the L.
 
-![hades messing with tent](hades-tent.jpeg)
+![Hades messing with the playpen tent](hades-tent.jpeg)
 
 Since there is no door to deter Loki from leaving the kitchen, we had the bright idea of walling the kitchen off with our dining table. Essentially we laid the table down on its side, object-that-acts-as-cover-in-action-movies style. Set up a temporary litter box and had two bowls for food and water. It was a good plan for a few hours.
 
@@ -43,7 +44,7 @@ So began the first battle of Hades vs. Loki to assert their dominance of us, the
 
 Loki counters by running up to the door, curiously trying to figure out why his new roommate is crying. He foolishly tries to stick his paws under the door to offer assistance to his new roommate (bless his heart). I stare in horror and try to react to his friendly but foolish behavior but I know in my hearts of hearts that Hades is the type to fight in a flight-or-fight situation. His small, little chicken tender-like paws would not stand a chance against Hades.
 
-![another loki on couch](loki-couch.jpeg)
+![Loki on the couch](loki-couch.jpeg)
 
 No one is going to win this standoff (in actuality, Hades always wins), so I decide to sacrifice myself. I pull Loki off the door and open the door. Loki is going to stay in the room while I fend Hades off the closed door any way I can. I put the playpen tent in the way of the door to cover the area where Loki can put his paws through. It doesn't work and Hades just uses her head to force her way past the tent and to the door. I needed to add weight to the tent to keep it's place in front of the door.
 
@@ -61,7 +62,7 @@ In his first week with us, we actually had to bring the little guy to the pet ER
 
 I was quite fearful that the new changes in his environment (new home) caused this reaction and was super grateful that on that day, I already set up an appointment with a vet to just check him out.
 
-![loki with his carrot in tent](loki-carrot.jpeg)
+![Loki with his carrot toy in the tent](loki-carrot.jpeg)
 
 I took Loki in and they discovered he had a fever and told me that fevers in kittens and young cats can turn dangerous if left unnoticed and untreated. He had to be admitted to the pet hospital for IV fluid to keep him hydrated and to monitor him. This particular hospital did not have an overnight staff so we had to pick him up and bring him to an overnight pet hospital for extra IV fluids and monitoring because he was still not stable when we picked him up at the end of the day.
 
@@ -69,7 +70,7 @@ That sleep the night Loki stayed overnight at the pet hospital was not a pleasan
 
 In the end, he was discharged with a clean bill of health but the whole episode was soooo stressful and also soooo expensive. I am just very glad and grateful that I was working from home at that time and had that appointment on the day he fell sick. Not sure how it would have turned out otherwise.
 
-![poor loki at the vet](loki-vet.jpeg)
+![Loki at the vet](loki-vet.jpeg)
 
 That really does not tell the whole troublesome story of Loki though. I will end with this last story that can sum up how much of a troublemaker we have on our hands.
 

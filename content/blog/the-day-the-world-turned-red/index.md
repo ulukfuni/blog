@@ -1,11 +1,13 @@
 ---
 title: The Day The World Turned Red
+seoTitle: 'The Day The World Turned Red: Health'
 date: '2026-01-12'
 categories:
     - update
     - story
     - life
-description: A story about health
+description: "A story of health: hospital tests that ended with a rare blood cancer diagnosis, severe cirrhosis, and a full change of diet, habits, and outlook on life."
+image: ./raining-pills.png
 keywords:
     - writing
     - update
@@ -13,7 +15,7 @@ keywords:
     - story
     - grief
 ---
-![my life now](raining-pills.png)
+![Illustration of a person holding an umbrella under falling pills](raining-pills.png)
 I have been keeping quiet about a big aspect of my life and I am sure some of my closer circle have noticed a few things have changed about/around me. This is that story.
 
 After two bouts of COVID, I needed to get an overall picture of my health. Also I had a nagging pain on the left side of my abdomen that I wanted to get some insight into. So I found a PCP, and had her order some lab work (comprehensive blood work) to look into it. I also wanted to check out what was going on in my left side (pancreas) so asked to include that as well. I went and got the blood work. The results came back a few days later and they were definitely abnormal. So abnormal in fact, that my PCP recommended I go to the ER to get things checked out.

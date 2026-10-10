@@ -1,6 +1,7 @@
 ---
 title: Work
-description: Projects I've shipped and am still building — HoopSim, an AI resume studio, and full-stack AI-native work
+seoTitle: "Viet Nguyen's Software Project Portfolio"
+description: Viet Nguyen's project portfolio covers HoopSim fantasy basketball and Nurse Remotely's AI resume studio, with product details and the engineering behind both.
 keywords:
     - work
     - portfolio
@@ -15,7 +16,7 @@ I build full-stack AI-native products — the app, the backend, the model calls,
 
 Simulated fantasy basketball. You draft your team like a traditional fantasy league, then run full seasons in minutes — without the grind or real-world injury heartbreak.
 
-I came up with this while trying to run a Yahoo league as commissioner from 13 hours ahead. Timezones, injuries, the long NBA season. What if you just… skip that. Origin story is in [HoopSim Devlog #1](/hoopsim-devlog-1/).
+I came up with this while trying to run a Yahoo league as commissioner from 13 hours ahead. Timezones, injuries, the long NBA season. What if you just… skip that. The origin story is in [HoopSim Devlog #1](/hoopsim-devlog-1/), and I wrote about the latest [Daily Slate and multiplayer update](/hoopsim-devlog-2/).
 
 - Live: [hoopsim.xyz](https://hoopsim.xyz) · app: [app.hoopsim.xyz](https://app.hoopsim.xyz) — guest demo, no account required
 - Stack: Bun + Turborepo, Vite + React + TanStack Router, Convex backend, TypeScript game engine, daisyUI/Shadcn/Tailwind
@@ -31,6 +32,7 @@ It's playable. I'm still building it.
 An editorial-grade nursing resume builder for live job pages. Bring in one PDF, keep the facts honest, and return a cleaner draft that actually sounds employable. Tailor it to the job description on the page. Export an ATS-safe PDF.
 
 It's a product feature for Nurse Remotely, sitting on the job pages.
+I describe the [Jev benchmark inside Resume Studio](/can-you-swap-your-llm-for-jev/) in a separate post.
 
 - See it on the [Nurse Remotely job board](https://www.nurseremotely.com/jobs) when you are on an actual job posting
 - Stack: React 19 + Vite + Tailwind, Vercel serverless (`api/` + `server/lib/`), Vercel AI SDK, OpenAI + Gemini

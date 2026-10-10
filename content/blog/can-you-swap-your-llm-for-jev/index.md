@@ -1,11 +1,13 @@
 ---
 title: Can You Swap Your LLM for Jev?
+seoTitle: 'Jev vs Gemini: Resume Studio Benchmark'
 date: '2026-09-20'
 categories:
     - dev
     - ai
     - typescript
-description: I measured swapping TypeSafe AI's Jev into a resume studio. This is what happened
+description: A Jev benchmark in Nurse Remotely's resume studio compares latency and cost with Gemini Flash-Lite, then tests model judgments against keyword matching.
+image: ../../assets/profile-pic.jpg
 keywords:
     - jev
     - typesafe
@@ -30,6 +32,7 @@ So its not a clean change to use like changing a model in Cursor.  Context moves
 ## How I measured
 
 The product is the Resume Studio on [Nurse Remotely](https://www.nurseremotely.com/jobs). It takes a nurse's resume, tailors it against a job description, and runs mock interviews (just released this feature as of this past weekend). I moved three calls over and benched them against the real production code paths, thirty samples each, on 2026-09-19.
+I describe the [Resume Studio and its engineering stack on my work page](/work/).
 
 Models were `jev-1.13.0` and `gemini-3.1-flash-lite`, the cheap fast Gemini tier.
 

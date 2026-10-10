@@ -1,9 +1,11 @@
 ---
 title: Update 2023
+seoTitle: '2023 Blog Update: Writing in Public'
 date: '2023-07-14'
 categories:
     - update
-description: An update for 2023
+description: A return to blogging in 2023 with plans to learn in public again, starting with posts on frontend state management tools like Xstate and the Prisma ORM.
+image: ./cat.webp
 keywords:
     - writing
     - update
@@ -11,7 +13,7 @@ keywords:
     - tech
 ---
 
-![This is a cat](cat.webp)
+![Illustration of an orange-and-white cat looking up against a blue sky](cat.webp)
 
 Welcome Again!
 

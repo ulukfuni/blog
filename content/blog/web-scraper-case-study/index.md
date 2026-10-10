@@ -1,5 +1,6 @@
 ---
 title: Case Study - Web Scrapers
+seoTitle: 'Web Scraping with Node.js, PHP and Python'
 date: '2019-04-01'
 categories:
     - dev
@@ -14,7 +15,8 @@ keywords:
     - web-scraping
     - javascript
     - python
-description: A case study into web scraping with different languages
+description: An experiment comparing web scrapers in Node.js, PHP, and Python using Cheerio, Goutte, and BeautifulSoup to pull Dwyane Wade stats from Basketball Reference.
+image: ./dwade.png
 ---
 
 > TL;DR: I made a bunch of web scraper scripts in different languages to see which one I liked and for experimentation purposes. NodeJs was easy to work with since I worked with it in the past, PHP was easy to start up, easy to code, and low barrier for entry and Python was the hardest to get started as well as code but most fun because it was a new experience. Also as a highlight to Dwyane Wade, greatest Heat Player of all Time.
