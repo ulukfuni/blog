@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 
 const WS_URL =
     (typeof process !== "undefined" && process.env.GATSBY_CHAT_WS_URL) ||
-    "ws://127.0.0.1:9876/ws"
+    "wss://blog-chat.thirteen-game.workers.dev/ws"
 
 function formatTime(ts) {
     const d = new Date(ts)
