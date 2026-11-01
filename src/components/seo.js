@@ -12,9 +12,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({
     description,
-    lang,
-    meta,
-    keywords,
+    lang = `en`,
+    meta = [],
+    keywords = [],
     title,
     pathname,
     image,
@@ -151,12 +151,6 @@ function SEO({
     )
 }
 
-SEO.defaultProps = {
-    lang: `en`,
-    meta: [],
-    keywords: [],
-    type: `website`,
-}
 
 SEO.propTypes = {
     description: PropTypes.string,
