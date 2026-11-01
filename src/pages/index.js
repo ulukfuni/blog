@@ -1,7 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
+import Chat from "../components/chat"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pills from "../components/pills"
@@ -99,6 +100,7 @@ function BlogIndex({ data, location }) {
                     </div>
                 )
             })}
+            <Chat room="lobby" />
         </Layout>
     )
 }
