@@ -5,7 +5,7 @@ import {
     faCodepen,
 } from "@fortawesome/free-brands-svg-icons"
 
-export default [
+const social = [
     {
         kind: "GitHub",
         icon: faGithub,
@@ -27,3 +27,5 @@ export default [
         url: "https://codepen.io/ulukfuni",
     },
 ]
+
+export default social
