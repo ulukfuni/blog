@@ -26,6 +26,8 @@ export default function Chat({ room = "lobby" }) {
     useEffect(() => {
         let cancelled = false
         function connect() {
+            const url = `${WS_URL}?room=${encodeURIComponent(room)}`
+            const ws = new WebSocket(url)
             wsRef.current = ws
             ws.onopen = () => {
                 if (cancelled) return
