@@ -18,12 +18,14 @@ export default function Chat({ room = "lobby" }) {
     const wsRef = useRef(null)
     const logRef = useRef(null)
     const reconnectTimer = useRef(null)
-
+    useEffect(() => {
+        if (typeof window !== "undefined" && window.innerWidth < 768) {
+            setOpen(false)
+        }
+    }, [])
     useEffect(() => {
         let cancelled = false
         function connect() {
-            const url = `${WS_URL}?room=${encodeURIComponent(room)}`
-            const ws = new WebSocket(url)
             wsRef.current = ws
             ws.onopen = () => {
                 if (cancelled) return
