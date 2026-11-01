@@ -21,7 +21,7 @@ const style = {
     },
 }
 
-const Pills = ({ items, linkableItems }) => (
+const Pills = ({ items = [], linkableItems = [] }) => (
     <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
         {items.filter(Boolean).map((item, i) => {
             const slug = categorySlug(item)
@@ -39,10 +39,6 @@ const Pills = ({ items, linkableItems }) => (
     </div>
 )
 
-Pills.defaultProps = {
-    items: [],
-    linkableItems: [],
-}
 
 Pills.propTypes = {
     items: PropTypes.arrayOf(PropTypes.string),
