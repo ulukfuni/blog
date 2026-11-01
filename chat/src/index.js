@@ -3,6 +3,8 @@
 // Deploy:        celld deploy . --bucket s3://...   then run celld against the bucket.
 
 const HISTORY_LIMIT = 50;
+const MAX_TEXT_LEN = 500;
+const MIN_MSG_INTERVAL_MS = 1000;
 const MAX_NICK_LEN = 16;
 
 function sanitizeNick(raw) {
@@ -89,8 +91,15 @@ export class ChatRoom {
     }
 
     if (data && data.type === "msg") {
-      const text = String(data.text || "").trim();
+      const now = Date.now();
+      if (att.lastMsg && now - att.lastMsg < MIN_MSG_INTERVAL_MS) {
+        ws.send(JSON.stringify({ type: "error", text: "slow down" }));
+        return;
+      }
+      const text = String(data.text || "").trim().slice(0, MAX_TEXT_LEN);
       if (!text) return;
+      att.lastMsg = now;
+      ws.serializeAttachment({ ...att, lastMsg: now });
       // IRC-ish /me action.
       const kind = text.startsWith("/me ") ? "action" : "msg";
       const body = kind === "action" ? text.slice(4) : text;
