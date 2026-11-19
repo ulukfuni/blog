@@ -9,6 +9,18 @@ import Pills from "../components/pills"
 import { rhythm } from "../utils/typography"
 import { categorySlug, isListedPost, isStandalonePageSlug } from "../utils/posts"
 
+const visuallyHidden = {
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    padding: 0,
+    margin: "-1px",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: 0,
+}
+
 function BlogIndex({ data, location }) {
     const siteTitle = data.site.siteMetadata.title
     const imageSrc =
@@ -96,7 +108,10 @@ function BlogIndex({ data, location }) {
                                     node.excerpt,
                             }}
                         ></p>
-                        <Link to={node.fields.slug}>Read More</Link>
+                        <Link to={node.fields.slug}>
+                            Read More
+                            <span style={visuallyHidden}>{`: ${title}`}</span>
+                        </Link>
                     </div>
                 )
             })}

@@ -31,3 +31,12 @@
 - Never push directly to `master`. Always create a feature branch and open a PR to `master`.
 - Branch naming: `feature/<short-description>`, `fix/<short-description>`.
 - Commit messages: imperative, concise, describe the "why".
+
+## Learned User Preferences
+- Open pull requests as drafts unless the user asks for a ready-to-merge PR.
+- When writing or editing posts, follow `docs/blog-style-guide.md`: first person, conversational, and clear enough for a broad audience on technical posts. Leave `draft: true` until the user says to publish.
+
+## Learned Workspace Facts
+- Google Analytics is `gatsby-plugin-google-gtag`. The tracking ID is the Netlify build env `GA_TRACKING_ID`. Gatsby inlines it at build time, so changing it requires a new production deploy.
+- `/now` and `/work` are standalone markdown pages (`content/blog/now/index.md`, `content/blog/work/index.md`) rendered by `src/templates/now.js` and `src/templates/work.js`. `gatsby-node.js` special-cases them before the draft guard. `isStandalonePageSlug` in `src/utils/posts.js` omits them from the home list, RSS, `posts.json`, category archives, and prev/next. Keep `/work` in the same prose layout as `/now`.
+- New posts come from `npm run new-post` (`node scripts/create-post.js "Title"`), which writes `content/blog/<slug>/index.md` and starts as a draft. Frontmatter follows `docs/blog-style-guide.md`.
